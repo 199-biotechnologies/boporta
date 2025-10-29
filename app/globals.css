@@ -32,14 +32,97 @@
   }
 
   .btn-primary {
-    @apply bg-crimson text-bone px-12 py-4 font-sans font-semibold uppercase tracking-wider transition-all duration-150 hover:translate-y-[-2px] hover:shadow-[0_4px_12px_rgba(139,0,0,0.3)];
+    @apply bg-crimson text-bone px-12 py-4 font-sans font-semibold uppercase tracking-wider
+    transition-all duration-200 ease-out
+    hover:translate-y-[-2px] hover:shadow-[0_6px_16px_rgba(139,0,0,0.4)]
+    active:translate-y-0 active:shadow-[0_2px_8px_rgba(139,0,0,0.3)]
+    relative overflow-hidden;
+  }
+
+  .btn-primary::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent
+    translate-x-[-100%] transition-transform duration-500;
+  }
+
+  .btn-primary:hover::before {
+    @apply translate-x-[100%];
   }
 
   .btn-secondary {
-    @apply border-2 border-titanium text-midnight px-12 py-4 font-sans font-semibold uppercase tracking-wider transition-all duration-150 hover:bg-titanium hover:text-bone;
+    @apply border-2 border-bone text-bone px-12 py-4 font-sans font-semibold uppercase tracking-wider
+    transition-all duration-200 ease-out
+    hover:bg-bone hover:text-midnight hover:border-bone
+    active:scale-[0.98]
+    relative overflow-hidden;
+  }
+
+  .btn-secondary::before {
+    content: '';
+    @apply absolute inset-0 bg-bone scale-x-0 transition-transform duration-300 ease-out origin-left;
+  }
+
+  .btn-secondary:hover::before {
+    @apply scale-x-100;
+  }
+
+  .btn-secondary span {
+    @apply relative z-10;
   }
 
   .divider-line {
     @apply w-px h-16 bg-titanium;
+  }
+}
+
+@layer utilities {
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in-scale {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in-delay-1 {
+    animation: fade-in 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-in-delay-2 {
+    animation: fade-in 0.8s ease-out 0.4s forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-in-delay-3 {
+    animation: fade-in 0.8s ease-out 0.6s forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-in-delay-4 {
+    animation: fade-in 0.8s ease-out 0.8s forwards;
+    opacity: 0;
+  }
+
+  .animate-on-scroll {
+    animation: fade-in-scale 0.6s ease-out forwards;
   }
 }

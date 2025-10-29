@@ -12,9 +12,9 @@ const config: Config = {
         midnight: "#0A1929",
         titanium: "#4A5568",
         bone: "#FAFAFA",
-        crimson: "#8B0000",
-        gold: "#B8860B",
-        steel: "#2C3E50",
+        crimson: "#DC143C", // Brighter crimson with better contrast on navy
+        gold: "#D4AF37", // Brighter gold for Family Law
+        steel: "#5D7FA3", // Softer steel blue for Criminal Defense
       },
       fontFamily: {
         display: ["var(--font-playfair)", "serif"],

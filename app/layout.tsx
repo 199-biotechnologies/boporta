@@ -4,21 +4,21 @@ import "./globals.css";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
-  weight: ["700", "900"],
+  weight: ["600", "700", "900"],
   variable: "--font-playfair",
   display: "swap",
 });
 
 const crimson = Crimson_Text({
   subsets: ["latin"],
-  weight: ["400", "600"],
+  weight: ["400", "600", "700"],
   variable: "--font-crimson",
   display: "swap",
 });
 
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-inter",
   display: "swap",
 });
