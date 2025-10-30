@@ -65,8 +65,12 @@ export default function Home() {
             One lawyer who operates in both.
           </p>
 
-          <div className="font-sans text-sm md:text-base uppercase tracking-[0.15em] mb-12 text-bone/60 animate-fade-in-delay-3">
-            Miami, Florida <span className="mx-3">|</span> 25 Years
+          <div className="font-sans text-sm md:text-base uppercase tracking-[0.15em] mb-8 text-bone/60 animate-fade-in-delay-3">
+            Avvo 8.6 Rating (Excellent) <span className="mx-3">|</span> 1,550+ Cases <span className="mx-3">|</span> 29 Years
+          </div>
+
+          <div className="font-sans text-xs md:text-sm mb-12 text-bone/50 animate-fade-in-delay-3">
+            Best DUI Lawyer Miami (Expertise.com 2016-2022) • Client's Choice Award 2022 (Avvo)
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-delay-4">
@@ -135,6 +139,68 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Awards & Recognition Section */}
+      <section className="py-16 bg-bone border-t border-midnight/10">
+        <div className="container-custom">
+          <ScrollReveal>
+            <h3 className="font-display text-2xl md:text-3xl font-bold text-center mb-12 uppercase tracking-wide">
+              Awards & Recognition
+            </h3>
+          </ScrollReveal>
+
+          <ScrollReveal delay={100}>
+            <div className="max-w-4xl mx-auto">
+              <div className="grid md:grid-cols-3 gap-8 mb-8">
+                {/* Avvo Rating */}
+                <div className="text-center">
+                  <div className="font-display text-3xl font-bold text-crimson mb-2">8.6/10</div>
+                  <div className="font-sans text-sm font-semibold uppercase tracking-wider text-midnight mb-1">Avvo Rating</div>
+                  <div className="font-body text-xs text-midnight/60">Excellent</div>
+                </div>
+
+                {/* Cases */}
+                <div className="text-center">
+                  <div className="font-display text-3xl font-bold text-crimson mb-2">1,550+</div>
+                  <div className="font-sans text-sm font-semibold uppercase tracking-wider text-midnight mb-1">Cases</div>
+                  <div className="font-body text-xs text-midnight/60">29 Years Experience</div>
+                </div>
+
+                {/* Client Reviews */}
+                <div className="text-center">
+                  <div className="font-display text-3xl font-bold text-crimson mb-2">5.0/5.0</div>
+                  <div className="font-sans text-sm font-semibold uppercase tracking-wider text-midnight mb-1">Client Reviews</div>
+                  <div className="font-body text-xs text-midnight/60">20 Reviews (Avvo)</div>
+                </div>
+              </div>
+
+              <div className="border-t border-midnight/10 pt-8">
+                <div className="font-sans text-xs uppercase tracking-wider text-center text-midnight/60 mb-4">Honors</div>
+                <div className="grid md:grid-cols-2 gap-4 text-center md:text-left">
+                  <div className="font-body text-sm text-midnight/80">
+                    <span className="font-semibold">2022:</span> Client's Choice Award (Avvo)
+                  </div>
+                  <div className="font-body text-sm text-midnight/80">
+                    <span className="font-semibold">2022:</span> Best DUI Lawyers in Miami (Expertise.com)
+                  </div>
+                  <div className="font-body text-sm text-midnight/80">
+                    <span className="font-semibold">2021:</span> Best DUI Lawyer in Miami (Expertise.com)
+                  </div>
+                  <div className="font-body text-sm text-midnight/80">
+                    <span className="font-semibold">2020:</span> Best DUI Lawyer in Miami (Expertise.com)
+                  </div>
+                  <div className="font-body text-sm text-midnight/80">
+                    <span className="font-semibold">2016:</span> Best DUI Lawyers in Miami (Expertise.com)
+                  </div>
+                  <div className="font-body text-sm text-midnight/80">
+                    <span className="font-semibold">11 Peer Endorsements</span> from Florida Attorneys
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* Two Practices Section */}
       <section className="section-padding bg-bone">
         <div className="container-custom">
@@ -151,6 +217,9 @@ export default function Home() {
                 <h4 className="font-display text-2xl md:text-3xl font-bold mb-6 text-gold">
                   FAMILY LAW
                 </h4>
+                <div className="font-sans text-sm uppercase tracking-wider text-titanium mb-4">
+                  500+ Family Law Cases | 29 Years
+                </div>
                 <p className="font-body text-lg md:text-xl leading-relaxed mb-6 text-midnight/80">
                   Custody. Assets. Future. Your family's foundation under attack requires precision, strategy, and resolve.
                 </p>
@@ -166,6 +235,9 @@ export default function Home() {
                 <h4 className="font-display text-2xl md:text-3xl font-bold mb-6 text-steel">
                   CRIMINAL DEFENSE
                 </h4>
+                <div className="font-sans text-sm uppercase tracking-wider text-titanium mb-4">
+                  750+ Criminal Defense Cases | 29 Years
+                </div>
                 <p className="font-body text-lg md:text-xl leading-relaxed mb-6 text-midnight/80">
                   Your freedom. Your name. Your life as you know it. Charges don't disappear by hoping. They end through preparation and execution.
                 </p>
@@ -280,7 +352,7 @@ export default function Home() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-display text-lg font-bold mb-2">25+ Years Trial Experience</h4>
+                  <h4 className="font-display text-lg font-bold mb-2">1,550+ Cases Over 29 Years</h4>
                   <p className="font-body text-midnight/80">Bench trials, jury trials, federal and state courts across South Florida.</p>
                 </div>
               </div>
@@ -347,16 +419,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Peer Recognition */}
       <section className="section-padding bg-midnight text-bone">
         <div className="container-custom max-w-5xl">
           <ScrollReveal>
-            <h3 className="font-display text-3xl md:text-5xl font-bold text-center mb-20 uppercase tracking-wide">
-              What Clients Say
+            <h3 className="font-display text-3xl md:text-5xl font-bold text-center mb-12 uppercase tracking-wide">
+              Recognized By Peers
             </h3>
+            <p className="font-body text-lg text-center text-bone/70 mb-20 max-w-3xl mx-auto">
+              11 attorney endorsements from Florida criminal defense and family law practitioners who have worked with, opposed, or observed Bo Porta in court.
+            </p>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
             <ScrollReveal delay={100}>
               <div className="border border-bone/20 p-8">
                 <div className="mb-6">
@@ -365,10 +440,13 @@ export default function Home() {
                   </svg>
                 </div>
                 <p className="font-body text-bone/80 mb-6 leading-relaxed">
-                  "Bo secured full custody when everyone said it was impossible. His preparation was meticulous. He saw the strategy the other side missed."
+                  "I have known Bo since he graduated from law school... He has distinguished himself with judges and his colleagues based upon his professionalism and knowledge of the law. His clients are well served with him as their advocate."
                 </p>
-                <div className="font-sans text-sm uppercase tracking-wider text-bone/60">
-                  — Maria S., Miami
+                <div className="font-sans text-xs uppercase tracking-wider text-bone/60">
+                  — Barry Wax
+                </div>
+                <div className="font-sans text-xs text-bone/50">
+                  Criminal Defense Attorney, Miami
                 </div>
               </div>
             </ScrollReveal>
@@ -381,10 +459,13 @@ export default function Home() {
                   </svg>
                 </div>
                 <p className="font-body text-bone/80 mb-6 leading-relaxed">
-                  "Charges dismissed. Record clean. Bo knew exactly what the prosecution didn't. He told me what would happen, and that's exactly what happened."
+                  "I endorse this lawyer without any reservation whatsoever... Any client in trouble with the law would be well-served to be represented by Bo Porta. Bo is an effective advocate and is known for delivering excellent results."
                 </p>
-                <div className="font-sans text-sm uppercase tracking-wider text-bone/60">
-                  — David K., Coral Gables
+                <div className="font-sans text-xs uppercase tracking-wider text-bone/60">
+                  — Robert Malove
+                </div>
+                <div className="font-sans text-xs text-bone/50">
+                  Criminal Defense Attorney, Florida
                 </div>
               </div>
             </ScrollReveal>
@@ -397,14 +478,39 @@ export default function Home() {
                   </svg>
                 </div>
                 <p className="font-body text-bone/80 mb-6 leading-relaxed">
-                  "$1.8M in assets protected in my divorce. The other side's attorney underestimated Bo. That was their mistake, my victory."
+                  "He is an aggressive advocate that really looks out for his clients."
                 </p>
-                <div className="font-sans text-sm uppercase tracking-wider text-bone/60">
-                  — Anonymous, South Beach
+                <div className="font-sans text-xs uppercase tracking-wider text-bone/60">
+                  — Patrick McGeehan
+                </div>
+                <div className="font-sans text-xs text-bone/50">
+                  Former Miami-Dade Police Officer, Criminal Defense Attorney
                 </div>
               </div>
             </ScrollReveal>
           </div>
+
+          <ScrollReveal delay={400}>
+            <div className="text-center border-t border-bone/20 pt-12">
+              <div className="font-sans text-sm uppercase tracking-wider text-bone/60 mb-6">Client Satisfaction</div>
+              <div className="flex justify-center items-center gap-8 flex-wrap">
+                <div>
+                  <div className="font-display text-4xl font-bold text-crimson">5.0/5.0</div>
+                  <div className="font-body text-sm text-bone/70">20 Client Reviews (Avvo)</div>
+                </div>
+                <div className="hidden md:block w-px h-12 bg-bone/20"></div>
+                <div>
+                  <div className="font-display text-4xl font-bold text-crimson">8.6/10</div>
+                  <div className="font-body text-sm text-bone/70">Avvo Rating (Excellent)</div>
+                </div>
+                <div className="hidden md:block w-px h-12 bg-bone/20"></div>
+                <div>
+                  <div className="font-display text-4xl font-bold text-crimson">2022</div>
+                  <div className="font-body text-sm text-bone/70">Client's Choice Award</div>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -650,17 +756,27 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-midnight text-bone py-16">
         <div className="container-custom text-center font-sans text-sm">
-          <div className="mb-4">
-            <span className="font-display text-xl font-bold">B<span className="inline-block w-px h-6 bg-bone mx-2 align-middle"></span>P</span>
+          <div className="mb-6">
+            <span className="font-display text-2xl font-bold">BOLÍVAR C. PORTA, ESQ.</span>
           </div>
-          <p className="text-titanium">
-            Licensed Florida Bar | Trial Attorney | Family Law | Criminal Defense
+          <p className="text-bone/80 mb-2">
+            Florida Bar Member Since 1996 • Federal Court Admitted
           </p>
-          <p className="text-titanium mt-2">
-            1999–2025
+          <p className="text-bone/70 mb-2">
+            Avvo 8.6 Rating (Excellent) • 1,550+ Cases in 29 Years
+          </p>
+          <p className="text-bone/60 mb-4 text-xs">
+            Best DUI Lawyer Miami 2016-2022 (Expertise.com) • Client's Choice Award 2022 (Avvo)
+          </p>
+          <div className="w-16 h-px bg-bone/20 mx-auto my-6"></div>
+          <p className="text-titanium mb-2">
+            Family Law • Criminal Defense • Trial Attorney
+          </p>
+          <p className="text-titanium text-xs">
+            bolivarporta.com
           </p>
           <p className="text-titanium mt-4 text-xs">
-            Appointments by arrangement only
+            © 1998–2025 Bolivar C. Porta, P.A. • Appointments by arrangement only
           </p>
         </div>
       </footer>
