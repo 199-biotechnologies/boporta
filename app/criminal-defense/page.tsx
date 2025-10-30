@@ -7,9 +7,9 @@ export const metadata = {
 
 export default function CriminalDefensePage() {
   return (
-    <main className="min-h-screen pt-20">
+    <main className="min-h-screen">
       {/* Hero */}
-      <section className="section-padding bg-midnight text-bone">
+      <section className="section-padding bg-midnight text-bone pt-20">
         <div className="container-custom max-w-4xl text-center">
           <ScrollReveal>
             <div className="inline-block mb-8">

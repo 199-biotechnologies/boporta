@@ -70,9 +70,9 @@ export default function FAQPage() {
   ];
 
   return (
-    <main className="min-h-screen pt-20">
+    <main className="min-h-screen">
       {/* Hero */}
-      <section className="section-padding bg-midnight text-bone">
+      <section className="section-padding bg-midnight text-bone pt-20">
         <div className="container-custom max-w-4xl text-center">
           <ScrollReveal>
             <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">
