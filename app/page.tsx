@@ -52,6 +52,61 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Credentials Bar */}
+      <section className="py-16 bg-midnight border-t border-bone/10">
+        <div className="container-custom">
+          <ScrollReveal>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+              {/* Florida Bar */}
+              <div className="group">
+                <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center border-2 border-crimson/40 transition-all duration-300 group-hover:border-crimson group-hover:scale-110">
+                  <svg className="w-6 h-6 text-crimson" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <div className="font-display text-xl font-bold text-bone mb-1">Florida Bar</div>
+                <div className="font-sans text-xs uppercase tracking-wider text-bone/60">Licensed 1996</div>
+              </div>
+
+              {/* Federal Court */}
+              <div className="group">
+                <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center border-2 border-crimson/40 transition-all duration-300 group-hover:border-crimson group-hover:scale-110">
+                  <svg className="w-6 h-6 text-crimson" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+                  </svg>
+                </div>
+                <div className="font-display text-xl font-bold text-bone mb-1">Federal Court</div>
+                <div className="font-sans text-xs uppercase tracking-wider text-bone/60">Southern District FL</div>
+              </div>
+
+              {/* Tulane JD */}
+              <div className="group">
+                <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center border-2 border-crimson/40 transition-all duration-300 group-hover:border-crimson group-hover:scale-110">
+                  <svg className="w-6 h-6 text-crimson" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                    <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                  </svg>
+                </div>
+                <div className="font-display text-xl font-bold text-bone mb-1">Tulane JD</div>
+                <div className="font-sans text-xs uppercase tracking-wider text-bone/60">Law School 1996</div>
+              </div>
+
+              {/* 25+ Years */}
+              <div className="group">
+                <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center border-2 border-crimson/40 transition-all duration-300 group-hover:border-crimson group-hover:scale-110">
+                  <svg className="w-6 h-6 text-crimson" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <div className="font-display text-xl font-bold text-bone mb-1">25+ Years</div>
+                <div className="font-sans text-xs uppercase tracking-wider text-bone/60">Trial Experience</div>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* Two Practices Section */}
       <section className="section-padding bg-bone">
         <div className="container-custom">

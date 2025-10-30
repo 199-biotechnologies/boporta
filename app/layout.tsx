@@ -29,6 +29,9 @@ export const metadata: Metadata = {
   keywords: "Miami lawyer, family law, criminal defense, trial attorney, divorce attorney, Bo Porta",
 };
 
+import Navigation from "./components/Navigation";
+import CallbackWidget from "./components/CallbackWidget";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -36,7 +39,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${playfair.variable} ${crimson.variable} ${inter.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Navigation />
+        {children}
+        <CallbackWidget />
+      </body>
     </html>
   );
 }
