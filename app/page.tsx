@@ -391,16 +391,16 @@ export default function Home() {
 
           {/* Main Headline */}
           <div className="flex items-center justify-center mb-8">
-            <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-bone md:text-right md:w-[280px] lg:w-[420px] pr-6 md:pr-8 animate-[slideInLeft_1.2s_cubic-bezier(0.16,1,0.3,1)_0.3s_both]">
+            <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-bone md:text-right md:w-[280px] lg:w-[420px] pr-6 md:pr-8 animate-hero-slide-left">
               FAMILY
             </h2>
-            <span className="inline-block w-px h-16 md:h-20 lg:h-24 bg-bone/80 flex-shrink-0 animate-[fadeInScale_1.5s_cubic-bezier(0.16,1,0.3,1)_0.8s_both]"></span>
-            <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-bone md:text-left md:w-[280px] lg:w-[420px] pl-6 md:pl-8 animate-[slideInRight_1.2s_cubic-bezier(0.16,1,0.3,1)_0.3s_both]">
+            <span className="inline-block w-px h-16 md:h-20 lg:h-24 bg-bone/80 flex-shrink-0 animate-hero-divider"></span>
+            <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-bone md:text-left md:w-[280px] lg:w-[420px] pl-6 md:pl-8 animate-hero-slide-right">
               CRIMINAL
             </h2>
           </div>
 
-          <p className="font-body text-xl md:text-2xl max-w-3xl mx-auto mb-12 leading-relaxed text-bone/90 animate-fade-in-delay-2">
+          <p className="font-body text-xl md:text-2xl max-w-3xl mx-auto mb-12 leading-relaxed text-bone/80 animate-fade-in-delay-2">
             Two worlds collide.<br />
             One <Link href="/about" className="text-bone hover:text-crimson transition-colors duration-300 underline-offset-4 hover:underline">Miami trial attorney</Link> who operates in both.
           </p>
@@ -409,7 +409,7 @@ export default function Home() {
             Avvo 8.6 Rating (Excellent) <span className="mx-3">|</span> 1,550+ Cases <span className="mx-3">|</span> 29 Years
           </div>
 
-          <div className="font-sans text-xs md:text-sm mb-12 text-bone/50 animate-fade-in-delay-3">
+          <div className="font-sans text-xs md:text-sm mb-12 text-bone/60 animate-fade-in-delay-3">
             Best DUI Lawyer Miami (Expertise.com 2016-2022) • Client's Choice Award 2022 (Avvo)
           </div>
 
@@ -425,7 +425,7 @@ export default function Home() {
       </header>
 
       {/* Credentials Bar */}
-      <section className="py-16 bg-midnight border-t border-bone/10">
+      <section className="section-padding-sm bg-midnight border-t border-bone/10">
         <div className="container-custom">
           <ScrollReveal>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 text-center">
@@ -480,7 +480,7 @@ export default function Home() {
       </section>
 
       {/* Awards & Recognition Section */}
-      <section className="py-16 bg-bone border-t border-midnight/10">
+      <section className="section-padding-sm bg-bone border-t border-midnight/10">
         <div className="container-custom">
           <ScrollReveal>
             <h3 className="font-display text-2xl md:text-3xl font-bold text-center mb-12 uppercase tracking-wide">
@@ -568,7 +568,7 @@ export default function Home() {
                 <p className="font-body text-lg md:text-xl font-semibold text-midnight mb-2">
                   I protect what matters most.
                 </p>
-                <p className="font-sans text-xs text-midnight/50 italic">
+                <p className="font-sans text-xs text-midnight/60 italic">
                   Source: Florida Bar Family Law Section, 2024
                 </p>
               </div>
@@ -591,7 +591,7 @@ export default function Home() {
                 <p className="font-body text-lg md:text-xl font-semibold text-midnight mb-2">
                   I end what shouldn't begin.
                 </p>
-                <p className="font-sans text-xs text-midnight/50 italic">
+                <p className="font-sans text-xs text-midnight/60 italic">
                   Source: Miami-Dade Public Defender's Office Records
                 </p>
               </div>
@@ -607,7 +607,7 @@ export default function Home() {
               <p className="font-body text-lg md:text-xl leading-relaxed text-midnight/80 mb-2">
                 The courtroom is where preparation meets consequence. 29 years of trial advocacy across Florida state and federal courts. I know what the other side doesn't.
               </p>
-              <p className="font-sans text-xs text-midnight/50 italic">
+              <p className="font-sans text-xs text-midnight/60 italic">
                 Last Updated: March 2025
               </p>
             </div>
@@ -1009,7 +1009,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-midnight text-bone py-16">
+      <footer className="bg-midnight text-bone section-padding-sm">
         <div className="container-custom text-center font-sans text-sm">
           <div className="mb-6">
             <span className="font-display text-2xl font-bold">BOLÍVAR C. PORTA, ESQ.</span>

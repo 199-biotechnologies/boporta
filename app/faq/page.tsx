@@ -122,7 +122,7 @@ export default function FAQPage() {
       </section>
 
       {/* FAQ Accordion */}
-      <section className="py-20 md:py-28 bg-bone">
+      <section className="section-padding-md bg-bone">
         <div className="container-custom max-w-4xl">
           <div className="space-y-4">
             {faqs.map((faq, index) => (
@@ -161,13 +161,17 @@ export default function FAQPage() {
                     id={`faq-answer-${index}`}
                     role="region"
                     aria-labelledby={`faq-question-${index}`}
-                    className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                      openIndex === index ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
+                    className={`grid transition-all duration-500 ease-in-out ${
+                      openIndex === index
+                        ? 'grid-rows-[1fr] opacity-100'
+                        : 'grid-rows-[0fr] opacity-0'
                     }`}
                     hidden={openIndex !== index}
                   >
-                    <div className="px-6 md:px-8 pb-6 md:pb-8 font-body text-base md:text-lg text-midnight/80 leading-relaxed whitespace-pre-line">
-                      {faq.answer}
+                    <div className="overflow-hidden">
+                      <div className="px-6 md:px-8 pb-6 md:pb-8 font-body text-base md:text-lg text-midnight/80 leading-relaxed whitespace-pre-line">
+                        {faq.answer}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -178,7 +182,7 @@ export default function FAQPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-24 bg-midnight text-bone">
+      <section className="section-padding-md bg-midnight text-bone">
         <div className="container-custom max-w-3xl text-center">
           <ScrollReveal>
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-8">

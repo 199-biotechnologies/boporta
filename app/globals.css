@@ -52,8 +52,22 @@
 }
 
 @layer components {
+  /* Section Padding System - 8pt grid compliant */
+  .section-padding-sm {
+    @apply py-12 md:py-16;  /* 48px → 64px */
+  }
+
+  .section-padding-md {
+    @apply py-16 md:py-24;  /* 64px → 96px */
+  }
+
+  .section-padding-lg {
+    @apply py-24 md:py-32;  /* 96px → 128px */
+  }
+
+  /* Legacy support - map to medium */
   .section-padding {
-    @apply py-32 md:py-64;
+    @apply py-24 md:py-32;  /* Updated from py-32 md:py-64 (was too large) */
   }
 
   .container-custom {
@@ -105,6 +119,38 @@
 }
 
 @layer utilities {
+  /*
+   * ANIMATION TIMING STANDARDS
+   * --------------------------
+   * Micro (buttons, hovers):         200ms
+   * Standard (tooltips, dropdowns):  300ms
+   * Complex (accordions, modals):    500ms
+   * Hero/Entrance animations:        800ms+
+   *
+   * EASING STANDARDS
+   * ----------------
+   * Entrances:                       ease-out
+   * Exits:                          ease-in
+   * State changes:                  ease-out
+   * Jony Ive animations:            cubic-bezier(0.16,1,0.3,1)
+   *
+   * OPACITY SCALE STANDARDS
+   * ----------------------
+   * Primary (100):     Full opacity - headings, primary text
+   * Secondary (80):    Body text, readable content
+   * Tertiary (60):     Metadata, labels, supporting text
+   * Disabled (40):     Inactive elements, subtle borders
+   * Subtle (20):       Very light backgrounds, ghost effects
+   *
+   * Usage Examples:
+   * - text-bone/80     → Body text on dark backgrounds
+   * - text-midnight/80 → Body text on light backgrounds
+   * - text-bone/60     → Labels/metadata on dark backgrounds
+   * - text-midnight/60 → Labels/metadata on light backgrounds
+   * - border-crimson/40 → Subtle accent borders
+   * - bg-midnight/20   → Ghost/hover backgrounds
+   */
+
   @keyframes fade-in {
     from {
       opacity: 0;
@@ -191,5 +237,18 @@
       opacity: 1;
       transform: scaleY(1);
     }
+  }
+
+  /* Hero Animation Classes - Jony Ive Style */
+  .animate-hero-slide-left {
+    animation: slideInLeft 1.2s cubic-bezier(0.16,1,0.3,1) 0.3s both;
+  }
+
+  .animate-hero-slide-right {
+    animation: slideInRight 1.2s cubic-bezier(0.16,1,0.3,1) 0.3s both;
+  }
+
+  .animate-hero-divider {
+    animation: fadeInScale 1.5s cubic-bezier(0.16,1,0.3,1) 0.8s both;
   }
 }
