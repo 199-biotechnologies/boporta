@@ -50,12 +50,12 @@ export default function Home() {
           </div>
 
           {/* Main Headline */}
-          <div className="flex items-center justify-center gap-6 md:gap-8 mb-8 animate-fade-in-delay-1">
-            <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-bone">
+          <div className="flex items-center justify-center mb-8 animate-fade-in-delay-1">
+            <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-bone text-right pr-6 md:pr-8">
               FAMILY
             </h2>
             <span className="inline-block w-px h-16 md:h-20 bg-bone/80 flex-shrink-0"></span>
-            <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-bone">
+            <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-bone text-left pl-6 md:pl-8">
               CRIMINAL
             </h2>
           </div>
