@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import ScrollReveal from "../components/ScrollReveal";
+import SchemaMarkup from "../components/SchemaMarkup";
 
 export default function FAQPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -69,8 +70,43 @@ export default function FAQPage() {
     },
   ];
 
+  // FAQPage Schema for SEO
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
+  // Breadcrumb Schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://bolivarporta.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "FAQ",
+        "item": "https://bolivarporta.com/faq"
+      }
+    ]
+  };
+
   return (
     <main className="min-h-screen">
+      <SchemaMarkup schema={[faqSchema, breadcrumbSchema]} />
       {/* Hero */}
       <section className="min-h-[400px] md:min-h-[500px] flex items-center bg-midnight text-bone">
         <div className="container-custom max-w-4xl text-center">

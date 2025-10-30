@@ -1,14 +1,39 @@
 import Image from "next/image";
 import ScrollReveal from "../components/ScrollReveal";
+import SchemaMarkup from "../components/SchemaMarkup";
 
 export const metadata = {
-  title: "About Bo Porta | Miami Trial Attorney",
-  description: "Learn about Bolívar C. Porta, experienced Miami trial attorney with 25+ years in family law and criminal defense.",
+  title: "About Bo Porta | Miami Trial Attorney | 29 Years Experience",
+  description: "Bolívar C. Porta - Miami trial attorney with 29 years experience, 1,550+ cases. Former Public Defender, Federal Court admitted. Avvo 8.6 rated. Family law and criminal defense specialist.",
+  alternates: {
+    canonical: 'https://bolivarporta.com/about',
+  },
 };
 
 export default function AboutPage() {
+  // Breadcrumb Schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://bolivarporta.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About",
+        "item": "https://bolivarporta.com/about"
+      }
+    ]
+  };
+
   return (
     <main className="min-h-screen">
+      <SchemaMarkup schema={breadcrumbSchema} />
       {/* Hero Section */}
       <section className="py-32 md:py-40 bg-midnight text-bone">
         <div className="container-custom max-w-6xl">
@@ -38,10 +63,11 @@ export default function AboutPage() {
                 <div className="absolute inset-0 bg-crimson/20 translate-x-4 translate-y-4"></div>
                 <Image
                   src="/portrait-bo-porta.webp"
-                  alt="Bolivar C. Porta"
+                  alt="Bolivar C. Porta, Miami trial attorney with 29 years experience in family law and criminal defense"
                   width={315}
                   height={420}
                   className="relative z-10 w-full"
+                  loading="lazy"
                 />
               </div>
             </ScrollReveal>

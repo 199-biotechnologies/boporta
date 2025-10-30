@@ -1,18 +1,165 @@
 import Image from "next/image";
+import Link from "next/link";
 import ScrollReveal from "./components/ScrollReveal";
+import SchemaMarkup from "./components/SchemaMarkup";
 
 export default function Home() {
+  // JSON-LD Schema for SEO
+  const schemas = [
+    // Attorney Schema
+    {
+      "@context": "https://schema.org",
+      "@type": "Attorney",
+      "name": "Bolívar C. Porta, P.A.",
+      "alternateName": "Bo Porta",
+      "url": "https://bolivarporta.com",
+      "logo": "https://bolivarporta.com/portrait-bo-porta.webp",
+      "image": "https://bolivarporta.com/portrait-bo-porta.webp",
+      "description": "Miami trial attorney with 29 years experience specializing in criminal defense and family law. Avvo 8.6 rated with over 1,550 cases.",
+      "telephone": "+1-305-371-5060",
+      "email": "info@boporta.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2000 S Dixie Highway, Suite 108",
+        "addressLocality": "Miami",
+        "addressRegion": "FL",
+        "postalCode": "33133",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "25.7617",
+        "longitude": "-80.1918"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Miami"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Miami-Dade County"
+        },
+        {
+          "@type": "State",
+          "name": "Florida"
+        }
+      ],
+      "knowsAbout": ["Criminal Defense", "Family Law", "DUI Defense", "Domestic Violence", "Divorce", "Child Custody"],
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Florida Bar"
+      },
+      "award": [
+        "Client's Choice Award 2022 (Avvo)",
+        "Best DUI Lawyer Miami 2022 (Expertise.com)",
+        "Best DUI Lawyer Miami 2021 (Expertise.com)",
+        "Best DUI Lawyer Miami 2020 (Expertise.com)",
+        "Best DUI Lawyer Miami 2016 (Expertise.com)"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "20",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "priceRange": "$$",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "17:00"
+        }
+      ]
+    },
+    // LocalBusiness Schema
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://bolivarporta.com",
+      "name": "Bolivar C. Porta, P.A.",
+      "image": "https://bolivarporta.com/portrait-bo-porta.webp",
+      "telephone": "+1-305-371-5060",
+      "email": "info@boporta.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2000 S Dixie Highway, Suite 108",
+        "addressLocality": "Miami",
+        "addressRegion": "FL",
+        "postalCode": "33133"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "25.7617",
+        "longitude": "-80.1918"
+      },
+      "url": "https://bolivarporta.com",
+      "priceRange": "$$"
+    },
+    // Review Schemas
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Barry Wax",
+        "jobTitle": "Criminal Defense Attorney"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "I have known Bo since he graduated from law school... He has distinguished himself with judges and his colleagues based upon his professionalism and knowledge of the law. His clients are well served with him as their advocate."
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Robert Malove",
+        "jobTitle": "Criminal Defense Attorney"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "I endorse this lawyer without any reservation whatsoever... Any client in trouble with the law would be well-served to be represented by Bo Porta. Bo is an effective advocate and is known for delivering excellent results."
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Patrick McGeehan",
+        "jobTitle": "Criminal Defense Attorney, Former Miami-Dade Police Officer"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "I've known Bo for years. I first met him when i was a Miami Dade Police Officer. He is an aggressive advocate that really looks out for his clients."
+    }
+  ];
+
   return (
     <main className="min-h-screen">
+      <SchemaMarkup schema={schemas} />
+
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center bg-midnight">
+      <header className="relative h-screen flex items-center justify-center bg-midnight">
         <div className="absolute inset-0 opacity-40">
           <Image
             src="/portrait-bo-porta.webp"
-            alt="Bo Porta"
+            alt="Bolivar C. Porta, Miami criminal defense and family law trial attorney with 29 years of experience"
             fill
             className="object-cover"
             priority
+            fetchpriority="high"
           />
         </div>
 
@@ -62,7 +209,7 @@ export default function Home() {
 
           <p className="font-body text-xl md:text-2xl max-w-3xl mx-auto mb-12 leading-relaxed text-bone/90 animate-fade-in-delay-2">
             Two worlds collide.<br />
-            One lawyer who operates in both.
+            One <Link href="/about" className="text-bone hover:text-crimson transition-colors duration-300 underline-offset-4 hover:underline">Miami trial attorney</Link> who operates in both.
           </p>
 
           <div className="font-sans text-sm md:text-base uppercase tracking-[0.15em] mb-8 text-bone/60 animate-fade-in-delay-3">
@@ -215,7 +362,9 @@ export default function Home() {
             <ScrollReveal delay={100}>
               <div className="md:pr-12 md:border-r md:border-titanium transition-all duration-300 hover:translate-x-[-4px]">
                 <h4 className="font-display text-2xl md:text-3xl font-bold mb-6 text-gold">
-                  FAMILY LAW
+                  <Link href="/family-law" className="hover:text-crimson transition-colors duration-300">
+                    FAMILY LAW
+                  </Link>
                 </h4>
                 <div className="font-sans text-sm uppercase tracking-wider text-titanium mb-4">
                   500+ Family Law Cases | 29 Years
@@ -233,7 +382,9 @@ export default function Home() {
             <ScrollReveal delay={200}>
               <div className="md:pl-12 transition-all duration-300 hover:translate-x-[4px]">
                 <h4 className="font-display text-2xl md:text-3xl font-bold mb-6 text-steel">
-                  CRIMINAL DEFENSE
+                  <Link href="/criminal-defense" className="hover:text-crimson transition-colors duration-300">
+                    CRIMINAL DEFENSE
+                  </Link>
                 </h4>
                 <div className="font-sans text-sm uppercase tracking-wider text-titanium mb-4">
                   750+ Criminal Defense Cases | 29 Years
