@@ -8,9 +8,9 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen pt-20">
+    <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="section-padding bg-midnight text-bone">
+      <section className="section-padding bg-midnight text-bone pt-20">
         <div className="container-custom max-w-6xl">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <ScrollReveal>

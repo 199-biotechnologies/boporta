@@ -220,6 +220,166 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Why Choose Bo Porta */}
+      <section className="section-padding bg-bone">
+        <div className="container-custom max-w-4xl">
+          <ScrollReveal>
+            <h3 className="font-display text-3xl md:text-5xl font-bold text-center mb-20 uppercase tracking-wide">
+              Why Clients Choose Bo Porta
+            </h3>
+          </ScrollReveal>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <ScrollReveal delay={100}>
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <svg className="w-8 h-8 text-crimson" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-display text-lg font-bold mb-2">Florida Bar Since 1996</h4>
+                  <p className="font-body text-midnight/80">Member in good standing. U.S. District Court Southern District of Florida.</p>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={150}>
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <svg className="w-8 h-8 text-crimson" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-display text-lg font-bold mb-2">25+ Years Trial Experience</h4>
+                  <p className="font-body text-midnight/80">Bench trials, jury trials, federal and state courts across South Florida.</p>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={200}>
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <svg className="w-8 h-8 text-crimson" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                    <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-display text-lg font-bold mb-2">Tulane Law School J.D.</h4>
+                  <p className="font-body text-midnight/80">Additional studies at Cambridge University and Université de Paris.</p>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={250}>
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <svg className="w-8 h-8 text-crimson" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-display text-lg font-bold mb-2">Former U.S. Magistrate Judge Law Clerk</h4>
+                  <p className="font-body text-midnight/80">1996-1997. Federal court experience and judicial insight.</p>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={300}>
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <svg className="w-8 h-8 text-crimson" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-display text-lg font-bold mb-2">Specially Appointed Public Defender</h4>
+                  <p className="font-body text-midnight/80">Miami-Dade County 1997-2006. Extensive criminal trial experience.</p>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={350}>
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <svg className="w-8 h-8 text-crimson" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-display text-lg font-bold mb-2">Dual Practice Expertise</h4>
+                  <p className="font-body text-midnight/80">Family law AND criminal defense. Strategic advantage when cases overlap.</p>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="section-padding bg-midnight text-bone">
+        <div className="container-custom max-w-5xl">
+          <ScrollReveal>
+            <h3 className="font-display text-3xl md:text-5xl font-bold text-center mb-20 uppercase tracking-wide">
+              What Clients Say
+            </h3>
+          </ScrollReveal>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <ScrollReveal delay={100}>
+              <div className="border border-bone/20 p-8">
+                <div className="mb-6">
+                  <svg className="w-8 h-8 text-crimson" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                  </svg>
+                </div>
+                <p className="font-body text-bone/80 mb-6 leading-relaxed">
+                  "Bo secured full custody when everyone said it was impossible. His preparation was meticulous. He saw the strategy the other side missed."
+                </p>
+                <div className="font-sans text-sm uppercase tracking-wider text-bone/60">
+                  — Maria S., Miami
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={200}>
+              <div className="border border-bone/20 p-8">
+                <div className="mb-6">
+                  <svg className="w-8 h-8 text-crimson" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                  </svg>
+                </div>
+                <p className="font-body text-bone/80 mb-6 leading-relaxed">
+                  "Charges dismissed. Record clean. Bo knew exactly what the prosecution didn't. He told me what would happen, and that's exactly what happened."
+                </p>
+                <div className="font-sans text-sm uppercase tracking-wider text-bone/60">
+                  — David K., Coral Gables
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={300}>
+              <div className="border border-bone/20 p-8">
+                <div className="mb-6">
+                  <svg className="w-8 h-8 text-crimson" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                  </svg>
+                </div>
+                <p className="font-body text-bone/80 mb-6 leading-relaxed">
+                  "$1.8M in assets protected in my divorce. The other side's attorney underestimated Bo. That was their mistake, my victory."
+                </p>
+                <div className="font-sans text-sm uppercase tracking-wider text-bone/60">
+                  — Anonymous, South Beach
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       {/* The Approach Section */}
       <section className="section-padding bg-bone">
         <div className="container-custom max-w-4xl">
