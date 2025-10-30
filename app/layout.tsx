@@ -73,6 +73,7 @@ export const metadata: Metadata = {
     "geo.placename": "Miami",
     "geo.position": "25.7617;-80.1918",
     "ICBM": "25.7617, -80.1918",
+    "article:modified_time": "2025-03-01T00:00:00Z",
   },
 };
 

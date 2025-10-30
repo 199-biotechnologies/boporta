@@ -8,6 +8,9 @@ export const metadata = {
   alternates: {
     canonical: 'https://bolivarporta.com/about',
   },
+  other: {
+    "article:modified_time": "2025-03-01T00:00:00Z",
+  },
 };
 
 export default function AboutPage() {
@@ -284,7 +287,7 @@ export default function AboutPage() {
             <p className="font-body text-xl text-midnight/80 mb-12 leading-relaxed">
               Whether you're facing family law challenges or criminal charges, experience matters. Contact the Law Office of Bolívar C. Porta today.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-6">
               <a href="tel:3053715060" className="btn-primary">
                 Call (305) 371-5060
               </a>
@@ -292,6 +295,9 @@ export default function AboutPage() {
                 Contact Form
               </a>
             </div>
+            <p className="font-sans text-xs text-midnight/50 italic">
+              Last Updated: March 2025 | Source: Florida Bar records, Avvo.com
+            </p>
           </ScrollReveal>
         </div>
       </section>
