@@ -181,7 +181,7 @@ export default function BlogPost() {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-midnight text-bone">
+      <section className="py-20 md:py-24 bg-midnight text-bone">
         <div className="container-custom max-w-3xl text-center">
           <ScrollReveal>
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-8">

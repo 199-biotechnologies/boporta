@@ -9,7 +9,7 @@ export default function CriminalDefensePage() {
   return (
     <main className="min-h-screen">
       {/* Hero */}
-      <section className="section-padding bg-midnight text-bone pt-20">
+      <section className="min-h-[500px] md:min-h-[600px] flex items-center bg-midnight text-bone">
         <div className="container-custom max-w-4xl text-center">
           <ScrollReveal>
             <div className="inline-block mb-8">
@@ -30,7 +30,7 @@ export default function CriminalDefensePage() {
       </section>
 
       {/* Practice Areas */}
-      <section className="section-padding bg-bone">
+      <section className="py-24 md:py-32 bg-bone">
         <div className="container-custom max-w-5xl">
           <ScrollReveal>
             <h2 className="font-display text-3xl md:text-5xl font-bold text-center mb-20 uppercase tracking-wide">
@@ -89,7 +89,7 @@ export default function CriminalDefensePage() {
       </section>
 
       {/* Former Public Defender Advantage */}
-      <section className="section-padding bg-midnight text-bone">
+      <section className="py-24 md:py-32 bg-midnight text-bone">
         <div className="container-custom max-w-4xl">
           <ScrollReveal>
             <h2 className="font-display text-3xl md:text-5xl font-bold text-center mb-20 uppercase tracking-wide">
@@ -146,7 +146,7 @@ export default function CriminalDefensePage() {
       </section>
 
       {/* What To Do If Arrested */}
-      <section className="section-padding bg-bone">
+      <section className="py-24 md:py-32 bg-bone">
         <div className="container-custom max-w-4xl">
           <ScrollReveal>
             <h2 className="font-display text-3xl md:text-5xl font-bold text-center mb-20 uppercase tracking-wide">
@@ -228,7 +228,7 @@ export default function CriminalDefensePage() {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-midnight text-bone">
+      <section className="py-20 md:py-24 bg-midnight text-bone">
         <div className="container-custom max-w-3xl text-center">
           <ScrollReveal>
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-8">

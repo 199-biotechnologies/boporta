@@ -72,7 +72,7 @@ export default function FAQPage() {
   return (
     <main className="min-h-screen">
       {/* Hero */}
-      <section className="section-padding bg-midnight text-bone pt-20">
+      <section className="min-h-[400px] md:min-h-[500px] flex items-center bg-midnight text-bone">
         <div className="container-custom max-w-4xl text-center">
           <ScrollReveal>
             <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">
@@ -86,7 +86,7 @@ export default function FAQPage() {
       </section>
 
       {/* FAQ Accordion */}
-      <section className="section-padding bg-bone">
+      <section className="py-20 md:py-28 bg-bone">
         <div className="container-custom max-w-4xl">
           <div className="space-y-4">
             {faqs.map((faq, index) => (
@@ -122,7 +122,7 @@ export default function FAQPage() {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-midnight text-bone">
+      <section className="py-20 md:py-24 bg-midnight text-bone">
         <div className="container-custom max-w-3xl text-center">
           <ScrollReveal>
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-8">

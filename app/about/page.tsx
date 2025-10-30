@@ -10,7 +10,7 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="section-padding bg-midnight text-bone pt-20">
+      <section className="min-h-[600px] md:min-h-[700px] flex items-center bg-midnight text-bone">
         <div className="container-custom max-w-6xl">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <ScrollReveal>
@@ -49,7 +49,7 @@ export default function AboutPage() {
       </section>
 
       {/* Experience Section */}
-      <section className="section-padding bg-bone">
+      <section className="py-24 md:py-32 bg-bone">
         <div className="container-custom max-w-4xl">
           <ScrollReveal>
             <h2 className="font-display text-3xl md:text-5xl font-bold text-center mb-20 uppercase tracking-wide">
@@ -98,7 +98,7 @@ export default function AboutPage() {
       </section>
 
       {/* Education & Credentials */}
-      <section className="section-padding bg-midnight text-bone">
+      <section className="py-24 md:py-32 bg-midnight text-bone">
         <div className="container-custom max-w-4xl">
           <ScrollReveal>
             <h2 className="font-display text-3xl md:text-5xl font-bold text-center mb-20 uppercase tracking-wide">
@@ -157,7 +157,7 @@ export default function AboutPage() {
       </section>
 
       {/* Professional Experience */}
-      <section className="section-padding bg-bone">
+      <section className="py-24 md:py-32 bg-bone">
         <div className="container-custom max-w-4xl">
           <ScrollReveal>
             <h2 className="font-display text-3xl md:text-5xl font-bold text-center mb-20 uppercase tracking-wide">
@@ -210,7 +210,7 @@ export default function AboutPage() {
       </section>
 
       {/* Professional Associations */}
-      <section className="section-padding bg-midnight text-bone">
+      <section className="py-24 md:py-32 bg-midnight text-bone">
         <div className="container-custom max-w-4xl">
           <ScrollReveal>
             <h2 className="font-display text-3xl md:text-5xl font-bold text-center mb-20 uppercase tracking-wide">
@@ -238,7 +238,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-bone">
+      <section className="py-20 md:py-24 bg-bone">
         <div className="container-custom max-w-3xl text-center">
           <ScrollReveal>
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-8">
