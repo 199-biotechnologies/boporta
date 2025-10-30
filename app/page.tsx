@@ -490,6 +490,8 @@ export default function Home() {
               <div className="text-center font-body space-y-2 mb-8 text-bone/80">
                 <p>2000 S. Dixie Hwy, Suite 108</p>
                 <p>Miami, Florida 33133</p>
+                <p className="text-bone/60 text-sm pt-2">Mon-Fri: 9:00 AM – 5:00 PM</p>
+                <p className="text-bone/60 text-sm">By Appointment Only</p>
               </div>
 
               <div className="text-center mb-12">

@@ -18,6 +18,7 @@ export default function AboutPage() {
                 <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">
                   BOLÍVAR C. PORTA
                 </h1>
+                <div className="font-sans text-base text-bone/70 mb-2">(Bo Porta)</div>
                 <div className="font-sans text-lg uppercase tracking-wider text-bone/60 mb-8">
                   Trial Attorney | Miami, Florida
                 </div>
@@ -188,10 +189,10 @@ export default function AboutPage() {
 
             <ScrollReveal delay={200}>
               <div className="border-l-2 border-crimson pl-6">
-                <div className="font-display text-xl font-bold mb-2">Law Clerk</div>
-                <div className="font-sans text-sm uppercase tracking-wider text-titanium mb-2">U.S. Magistrate Judge Linnea Johnson | 1996–1997</div>
+                <div className="font-display text-xl font-bold mb-2">Senior Associate</div>
+                <div className="font-sans text-sm uppercase tracking-wider text-titanium mb-2">Multiple Miami-Based Firms | 1998–2003</div>
                 <p className="font-body text-midnight/80 leading-relaxed">
-                  Federal clerkship providing foundational understanding of federal court procedures and judicial decision-making.
+                  Developed litigation skills across various practice areas in South Florida legal community.
                 </p>
               </div>
             </ScrollReveal>
@@ -199,9 +200,19 @@ export default function AboutPage() {
             <ScrollReveal delay={250}>
               <div className="border-l-2 border-crimson pl-6">
                 <div className="font-display text-xl font-bold mb-2">Associate Attorney</div>
-                <div className="font-sans text-sm uppercase tracking-wider text-titanium mb-2">Miami-Based Firms | 1996–2003</div>
+                <div className="font-sans text-sm uppercase tracking-wider text-titanium mb-2">Soven & Wax, P.A. | 1996–1997</div>
                 <p className="font-body text-midnight/80 leading-relaxed">
-                  Developed litigation skills across various practice areas in South Florida legal community.
+                  Early practice experience at established Miami firm specializing in civil and criminal litigation.
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={300}>
+              <div className="border-l-2 border-crimson pl-6">
+                <div className="font-display text-xl font-bold mb-2">Law Clerk</div>
+                <div className="font-sans text-sm uppercase tracking-wider text-titanium mb-2">U.S. Magistrate Judge Linnea Johnson | 1996–1997</div>
+                <p className="font-body text-midnight/80 leading-relaxed">
+                  Federal clerkship providing foundational understanding of federal court procedures and judicial decision-making.
                 </p>
               </div>
             </ScrollReveal>
