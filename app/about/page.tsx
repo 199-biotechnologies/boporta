@@ -10,7 +10,7 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="min-h-[600px] md:min-h-[700px] flex items-center bg-midnight text-bone">
+      <section className="py-32 md:py-40 bg-midnight text-bone">
         <div className="container-custom max-w-6xl">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <ScrollReveal>
@@ -33,13 +33,13 @@ export default function AboutPage() {
             </ScrollReveal>
 
             <ScrollReveal delay={200}>
-              <div className="relative">
+              <div className="relative max-w-md mx-auto">
                 <div className="absolute inset-0 bg-crimson/20 translate-x-4 translate-y-4"></div>
                 <Image
                   src="/portrait-bo-porta.webp"
                   alt="Bolivar C. Porta"
-                  width={600}
-                  height={800}
+                  width={420}
+                  height={560}
                   className="relative z-10 w-full"
                 />
               </div>
