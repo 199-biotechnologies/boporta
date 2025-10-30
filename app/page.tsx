@@ -229,7 +229,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-      </section>
+      </header>
 
       {/* Credentials Bar */}
       <section className="py-16 bg-midnight border-t border-bone/10">
