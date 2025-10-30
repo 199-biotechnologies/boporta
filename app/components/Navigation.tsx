@@ -1,11 +1,13 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,6 +17,53 @@ export default function Navigation() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Handle Escape key to close mobile menu
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isMobileMenuOpen) {
+        setIsMobileMenuOpen(false);
+        menuButtonRef.current?.focus();
+      }
+    };
+
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
+  }, [isMobileMenuOpen]);
+
+  // Focus trap for mobile menu
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+
+    const focusableElements = mobileMenuRef.current?.querySelectorAll(
+      'a[href], button:not([disabled])'
+    );
+    if (!focusableElements || focusableElements.length === 0) return;
+
+    const firstElement = focusableElements[0] as HTMLElement;
+    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+
+    const handleTab = (e: KeyboardEvent) => {
+      if (e.key !== 'Tab') return;
+
+      if (e.shiftKey) {
+        if (document.activeElement === firstElement) {
+          e.preventDefault();
+          lastElement.focus();
+        }
+      } else {
+        if (document.activeElement === lastElement) {
+          e.preventDefault();
+          firstElement.focus();
+        }
+      }
+    };
+
+    document.addEventListener('keydown', handleTab);
+    firstElement.focus();
+
+    return () => document.removeEventListener('keydown', handleTab);
+  }, [isMobileMenuOpen]);
 
   const navLinks = [
     { href: '/', label: 'Home' },
@@ -31,7 +80,7 @@ export default function Navigation() {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${
           isScrolled
             ? 'bg-midnight/98 backdrop-blur-md shadow-xl border-b border-bone/5'
-            : 'bg-midnight/60 backdrop-blur-sm'
+            : 'bg-midnight/85 backdrop-blur-md shadow-sm'
         }`}
       >
         <div className="container-custom">
@@ -65,7 +114,7 @@ export default function Navigation() {
               ))}
               <a
                 href="tel:3053715060"
-                className="btn-primary !py-3 !px-8 text-xs"
+                className="btn-primary py-3 px-8 text-xs"
               >
                 Call Now
               </a>
@@ -73,9 +122,12 @@ export default function Navigation() {
 
             {/* Mobile Menu Button */}
             <button
+              ref={menuButtonRef}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden text-bone p-2 transition-transform duration-300 hover:scale-110"
-              aria-label="Toggle menu"
+              className="md:hidden text-bone p-2 transition-transform duration-300 ease-out hover:scale-110"
+              aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-menu"
             >
               <div className="w-6 h-5 flex flex-col justify-between">
                 <span
@@ -101,20 +153,34 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 z-40 md:hidden transition-all duration-300 ${
+        id="mobile-menu"
+        ref={mobileMenuRef}
+        className={`fixed inset-0 z-40 md:hidden transition-all duration-300 ease-out ${
           isMobileMenuOpen
             ? 'opacity-100 pointer-events-auto'
             : 'opacity-0 pointer-events-none'
         }`}
+        aria-hidden={!isMobileMenuOpen}
       >
         {/* Backdrop */}
         <div
           className="absolute inset-0 bg-midnight/95 backdrop-blur-sm"
           onClick={() => setIsMobileMenuOpen(false)}
+          aria-label="Close menu"
         ></div>
 
         {/* Menu Content */}
         <div className="relative h-full flex flex-col justify-center items-center space-y-8 p-8">
+          {/* Close Button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="absolute top-6 right-6 text-bone p-2 hover:text-crimson transition-colors duration-200 ease-out"
+            aria-label="Close menu"
+          >
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
           {navLinks.map((link, index) => (
             <Link
               key={link.href}

@@ -132,27 +132,39 @@ export default function FAQPage() {
                     ? 'border-crimson/40 bg-bone shadow-lg'
                     : 'border-titanium/10 bg-white hover:border-titanium/30 hover:shadow-md'
                 }`}>
-                  <button
-                    onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                    className="w-full text-left p-6 md:p-8 flex items-start justify-between gap-6 transition-all duration-300"
-                  >
-                    <h3 className={`font-display text-lg md:text-xl font-bold flex-1 transition-colors duration-300 ${
-                      openIndex === index ? 'text-midnight' : 'text-midnight/90'
-                    }`}>
-                      {faq.question}
-                    </h3>
-                    <div className={`flex-shrink-0 transition-all duration-500 ease-out ${
-                      openIndex === index ? 'rotate-180 text-crimson scale-110' : 'text-titanium/60'
-                    }`}>
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                      </svg>
-                    </div>
-                  </button>
+                  <h3>
+                    <button
+                      onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                      className="w-full text-left p-6 md:p-8 flex items-start justify-between gap-6 transition-all duration-300 ease-out"
+                      aria-expanded={openIndex === index}
+                      aria-controls={`faq-answer-${index}`}
+                      id={`faq-question-${index}`}
+                    >
+                      <span className={`font-display text-lg md:text-xl font-bold flex-1 transition-colors duration-300 ${
+                        openIndex === index ? 'text-midnight' : 'text-midnight/90'
+                      }`}>
+                        {faq.question}
+                      </span>
+                      <span
+                        className={`flex-shrink-0 transition-all duration-500 ease-out ${
+                          openIndex === index ? 'rotate-180 text-crimson scale-110' : 'text-titanium/60'
+                        }`}
+                        aria-hidden="true"
+                      >
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </span>
+                    </button>
+                  </h3>
                   <div
+                    id={`faq-answer-${index}`}
+                    role="region"
+                    aria-labelledby={`faq-question-${index}`}
                     className={`overflow-hidden transition-all duration-500 ease-in-out ${
                       openIndex === index ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
                     }`}
+                    hidden={openIndex !== index}
                   >
                     <div className="px-6 md:px-8 pb-6 md:pb-8 font-body text-base md:text-lg text-midnight/80 leading-relaxed whitespace-pre-line">
                       {faq.answer}

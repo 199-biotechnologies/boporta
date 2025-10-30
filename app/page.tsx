@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "./components/ScrollReveal";
 import SchemaMarkup from "./components/SchemaMarkup";
+import ContactForm from "./components/ContactForm";
 
 export default function Home() {
   // JSON-LD Schema for SEO
@@ -352,7 +353,6 @@ export default function Home() {
             fill
             className="object-cover"
             priority
-            fetchPriority="high"
           />
         </div>
 
@@ -394,7 +394,7 @@ export default function Home() {
             <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-bone md:text-right md:w-[280px] lg:w-[420px] pr-6 md:pr-8 animate-[slideInLeft_1.2s_cubic-bezier(0.16,1,0.3,1)_0.3s_both]">
               FAMILY
             </h2>
-            <span className="inline-block w-px h-16 md:h-20 bg-bone/80 flex-shrink-0 animate-[fadeInScale_1.5s_cubic-bezier(0.16,1,0.3,1)_0.8s_both]"></span>
+            <span className="inline-block w-px h-16 md:h-20 lg:h-24 bg-bone/80 flex-shrink-0 animate-[fadeInScale_1.5s_cubic-bezier(0.16,1,0.3,1)_0.8s_both]"></span>
             <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-bone md:text-left md:w-[280px] lg:w-[420px] pl-6 md:pl-8 animate-[slideInRight_1.2s_cubic-bezier(0.16,1,0.3,1)_0.3s_both]">
               CRIMINAL
             </h2>
@@ -414,11 +414,11 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-delay-4">
-            <a href="tel:3053715060" className="btn-primary group">
-              <span className="relative">Consultation</span>
+            <a href="/#contact" className="btn-primary group">
+              <span className="relative">Request Consultation</span>
             </a>
             <a href="tel:3053715060" className="btn-secondary group">
-              <span className="relative">(305) 371-5060</span>
+              <span className="relative">Call (305) 371-5060</span>
             </a>
           </div>
         </div>
@@ -428,7 +428,7 @@ export default function Home() {
       <section className="py-16 bg-midnight border-t border-bone/10">
         <div className="container-custom">
           <ScrollReveal>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 text-center">
               {/* Florida Bar */}
               <div className="group">
                 <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center border-2 border-crimson/40 transition-all duration-300 group-hover:border-crimson group-hover:scale-110">
@@ -553,7 +553,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-16 md:gap-0">
             {/* Family Law */}
             <ScrollReveal delay={100}>
-              <div className="md:pr-12 md:border-r md:border-titanium transition-all duration-300 hover:translate-x-[-4px]">
+              <div className="md:pr-12 md:border-r md:border-titanium transition-all duration-300 ease-out hover:scale-[1.02]">
                 <h4 className="font-display text-2xl md:text-3xl font-bold mb-6 text-gold">
                   <Link href="/family-law" className="hover:text-crimson transition-colors duration-300">
                     FAMILY LAW
@@ -576,7 +576,7 @@ export default function Home() {
 
             {/* Criminal Defense */}
             <ScrollReveal delay={200}>
-              <div className="md:pl-12 transition-all duration-300 hover:translate-x-[4px]">
+              <div className="md:pl-12 transition-all duration-300 ease-out hover:scale-[1.02]">
                 <h4 className="font-display text-2xl md:text-3xl font-bold mb-6 text-steel">
                   <Link href="/criminal-defense" className="hover:text-crimson transition-colors duration-300">
                     CRIMINAL DEFENSE
@@ -627,7 +627,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-12">
             {/* Case 1 */}
             <ScrollReveal delay={100}>
-              <div className="border border-titanium/40 p-8 transition-all duration-300 hover:border-crimson/60 hover:translate-y-[-4px] hover:shadow-[0_8px_24px_rgba(139,0,0,0.2)] group">
+              <div className="border border-titanium/40 p-8 transition-all duration-300 ease-out hover:border-crimson/60 hover:translate-y-[-4px] hover:shadow-[0_8px_24px_rgba(139,0,0,0.2)] group">
                 <div className="font-display text-4xl font-bold text-crimson mb-4 transition-transform duration-300 group-hover:scale-110">
                   $2.1M
                 </div>
@@ -642,7 +642,7 @@ export default function Home() {
 
             {/* Case 2 */}
             <ScrollReveal delay={200}>
-              <div className="border border-titanium/40 p-8 transition-all duration-300 hover:border-crimson/60 hover:translate-y-[-4px] hover:shadow-[0_8px_24px_rgba(139,0,0,0.2)] group">
+              <div className="border border-titanium/40 p-8 transition-all duration-300 ease-out hover:border-crimson/60 hover:translate-y-[-4px] hover:shadow-[0_8px_24px_rgba(139,0,0,0.2)] group">
                 <div className="font-display text-4xl font-bold text-crimson mb-4 transition-transform duration-300 group-hover:scale-110">
                   Full Recovery
                 </div>
@@ -657,7 +657,7 @@ export default function Home() {
 
             {/* Case 3 */}
             <ScrollReveal delay={300}>
-              <div className="border border-titanium/40 p-8 transition-all duration-300 hover:border-crimson/60 hover:translate-y-[-4px] hover:shadow-[0_8px_24px_rgba(139,0,0,0.2)] group">
+              <div className="border border-titanium/40 p-8 transition-all duration-300 ease-out hover:border-crimson/60 hover:translate-y-[-4px] hover:shadow-[0_8px_24px_rgba(139,0,0,0.2)] group">
                 <div className="font-display text-4xl font-bold text-crimson mb-4 transition-transform duration-300 group-hover:scale-110">
                   Dismissed
                 </div>
@@ -948,7 +948,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section className="section-padding bg-bone">
+      <section id="contact" className="section-padding bg-bone">
         <div className="container-custom max-w-4xl">
           <ScrollReveal>
             <h3 className="font-display text-3xl md:text-5xl font-bold text-center mb-12 uppercase tracking-wide">
@@ -1003,105 +1003,7 @@ export default function Home() {
 
           {/* Contact Form */}
           <ScrollReveal delay={300}>
-            <form className="space-y-8 max-w-2xl mx-auto">
-              {/* Name */}
-              <div className="group">
-                <label
-                  htmlFor="name"
-                  className="block font-sans text-sm font-semibold uppercase tracking-wider text-titanium mb-3 transition-colors duration-300 group-focus-within:text-crimson"
-                >
-                  Full Name <span className="text-crimson">*</span>
-                </label>
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  autoComplete="name"
-                  placeholder="Your full name"
-                  className="w-full bg-white border-2 border-titanium/30 px-4 py-4 font-body text-midnight placeholder:text-titanium/40 focus:outline-none focus:border-crimson focus:shadow-[0_0_0_3px_rgba(139,0,0,0.1)] transition-all duration-300 hover:border-titanium/50"
-                  required
-                  minLength={2}
-                />
-              </div>
-
-              {/* Email & Phone Row */}
-              <div className="grid md:grid-cols-2 gap-6">
-                {/* Email */}
-                <div className="group">
-                  <label
-                    htmlFor="email"
-                    className="block font-sans text-sm font-semibold uppercase tracking-wider text-titanium mb-3 transition-colors duration-300 group-focus-within:text-crimson"
-                  >
-                    Email <span className="text-crimson">*</span>
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    autoComplete="email"
-                    placeholder="your@email.com"
-                    className="w-full bg-white border-2 border-titanium/30 px-4 py-4 font-body text-midnight placeholder:text-titanium/40 focus:outline-none focus:border-crimson focus:shadow-[0_0_0_3px_rgba(139,0,0,0.1)] transition-all duration-300 hover:border-titanium/50 invalid:border-crimson/30 [&:not(:placeholder-shown):not(:focus):invalid]:border-crimson [&:not(:placeholder-shown):not(:focus):invalid]:text-crimson"
-                    required
-                  />
-                </div>
-
-                {/* Phone */}
-                <div className="group">
-                  <label
-                    htmlFor="phone"
-                    className="block font-sans text-sm font-semibold uppercase tracking-wider text-titanium mb-3 transition-colors duration-300 group-focus-within:text-crimson"
-                  >
-                    Phone <span className="text-crimson">*</span>
-                  </label>
-                  <input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    autoComplete="tel"
-                    placeholder="(305) 000-0000"
-                    pattern="[\(]?[0-9]{3}[\)]?[\s\-]?[0-9]{3}[\s\-]?[0-9]{4}"
-                    className="w-full bg-white border-2 border-titanium/30 px-4 py-4 font-body text-midnight placeholder:text-titanium/40 focus:outline-none focus:border-crimson focus:shadow-[0_0_0_3px_rgba(139,0,0,0.1)] transition-all duration-300 hover:border-titanium/50 invalid:border-crimson/30 [&:not(:placeholder-shown):not(:focus):invalid]:border-crimson [&:not(:placeholder-shown):not(:focus):invalid]:text-crimson"
-                    required
-                  />
-                </div>
-              </div>
-
-              {/* Case Description */}
-              <div className="group">
-                <label
-                  htmlFor="message"
-                  className="block font-sans text-sm font-semibold uppercase tracking-wider text-titanium mb-3 transition-colors duration-300 group-focus-within:text-crimson"
-                >
-                  Brief Case Description <span className="text-crimson">*</span>
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={6}
-                  placeholder="Provide a brief description of your legal matter. All communications are confidential."
-                  className="w-full bg-white border-2 border-titanium/30 px-4 py-4 font-body text-midnight placeholder:text-titanium/40 focus:outline-none focus:border-crimson focus:shadow-[0_0_0_3px_rgba(139,0,0,0.1)] transition-all duration-300 resize-none hover:border-titanium/50"
-                  required
-                  minLength={10}
-                />
-                <p className="mt-2 text-xs text-titanium/60 font-sans">
-                  This form creates an inquiry, not an attorney-client relationship
-                </p>
-              </div>
-
-              {/* Submit Button */}
-              <div className="pt-4">
-                <button
-                  type="submit"
-                  className="btn-primary w-full group relative overflow-hidden"
-                >
-                  <span className="relative z-10">Request Consultation</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-crimson/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </button>
-                <p className="mt-4 text-center text-sm text-titanium/70 font-sans">
-                  Response within 24 business hours
-                </p>
-              </div>
-            </form>
+            <ContactForm />
           </ScrollReveal>
         </div>
       </section>

@@ -20,6 +20,35 @@
   html {
     scroll-behavior: smooth;
   }
+
+  /* Respect user's motion preferences (WCAG 2.1 Level AA) */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Global focus styles for accessibility */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-crimson ring-offset-2;
+  }
+
+  /* Enhanced link visibility */
+  a:not(.btn-primary):not(.btn-secondary) {
+    @apply underline decoration-1 underline-offset-2 decoration-titanium/40 hover:decoration-crimson transition-colors duration-200;
+  }
+
+  /* Button focus states */
+  button:focus-visible,
+  a.btn-primary:focus-visible,
+  a.btn-secondary:focus-visible {
+    @apply ring-2 ring-crimson ring-offset-2;
+  }
 }
 
 @layer components {

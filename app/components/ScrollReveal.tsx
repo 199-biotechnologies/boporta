@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, ReactNode } from 'react';
+import { useEffect, useRef, ReactNode, useState } from 'react';
 
 interface ScrollRevealProps {
   children: ReactNode;
@@ -10,8 +10,31 @@ interface ScrollRevealProps {
 
 export default function ScrollReveal({ children, className = '', delay = 0 }: ScrollRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
   useEffect(() => {
+    // Check for prefers-reduced-motion preference (WCAG 2.1 Level AA)
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setPrefersReducedMotion(mediaQuery.matches);
+
+    const handleChange = (e: MediaQueryListEvent) => {
+      setPrefersReducedMotion(e.matches);
+    };
+
+    mediaQuery.addEventListener('change', handleChange);
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleChange);
+    };
+  }, []);
+
+  useEffect(() => {
+    // If user prefers reduced motion, show content immediately without animation
+    if (prefersReducedMotion && ref.current) {
+      ref.current.style.opacity = '1';
+      return;
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -35,7 +58,7 @@ export default function ScrollReveal({ children, className = '', delay = 0 }: Sc
         observer.unobserve(ref.current);
       }
     };
-  }, [delay]);
+  }, [delay, prefersReducedMotion]);
 
   return (
     <div ref={ref} className={`opacity-0 ${className}`}>
