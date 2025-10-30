@@ -544,43 +544,104 @@ export default function Home() {
 
           {/* Contact Form */}
           <ScrollReveal delay={300}>
-            <form className="space-y-6 max-w-2xl mx-auto">
+            <form className="space-y-8 max-w-2xl mx-auto">
+              {/* Name */}
               <div className="group">
-                <label className="block font-sans text-sm font-semibold uppercase tracking-wider text-titanium mb-2 transition-colors duration-300 group-focus-within:text-crimson">
-                  Name
+                <label
+                  htmlFor="name"
+                  className="block font-sans text-sm font-semibold uppercase tracking-wider text-titanium mb-3 transition-colors duration-300 group-focus-within:text-crimson"
+                >
+                  Full Name <span className="text-crimson">*</span>
                 </label>
                 <input
+                  id="name"
+                  name="name"
                   type="text"
-                  className="w-full bg-white border border-titanium/40 p-4 font-body text-midnight focus:outline-none focus:border-2 focus:border-crimson transition-all duration-300 hover:border-titanium"
+                  autoComplete="name"
+                  placeholder="Your full name"
+                  className="w-full bg-white border-2 border-titanium/30 px-4 py-4 font-body text-midnight placeholder:text-titanium/40 focus:outline-none focus:border-crimson focus:shadow-[0_0_0_3px_rgba(139,0,0,0.1)] transition-all duration-300 hover:border-titanium/50"
                   required
+                  minLength={2}
                 />
               </div>
 
-              <div className="group">
-                <label className="block font-sans text-sm font-semibold uppercase tracking-wider text-titanium mb-2 transition-colors duration-300 group-focus-within:text-crimson">
-                  Phone
-                </label>
-                <input
-                  type="tel"
-                  className="w-full bg-white border border-titanium/40 p-4 font-body text-midnight focus:outline-none focus:border-2 focus:border-crimson transition-all duration-300 hover:border-titanium"
-                  required
-                />
+              {/* Email & Phone Row */}
+              <div className="grid md:grid-cols-2 gap-6">
+                {/* Email */}
+                <div className="group">
+                  <label
+                    htmlFor="email"
+                    className="block font-sans text-sm font-semibold uppercase tracking-wider text-titanium mb-3 transition-colors duration-300 group-focus-within:text-crimson"
+                  >
+                    Email <span className="text-crimson">*</span>
+                  </label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autoComplete="email"
+                    placeholder="your@email.com"
+                    className="w-full bg-white border-2 border-titanium/30 px-4 py-4 font-body text-midnight placeholder:text-titanium/40 focus:outline-none focus:border-crimson focus:shadow-[0_0_0_3px_rgba(139,0,0,0.1)] transition-all duration-300 hover:border-titanium/50 invalid:border-crimson/30 [&:not(:placeholder-shown):not(:focus):invalid]:border-crimson [&:not(:placeholder-shown):not(:focus):invalid]:text-crimson"
+                    required
+                  />
+                </div>
+
+                {/* Phone */}
+                <div className="group">
+                  <label
+                    htmlFor="phone"
+                    className="block font-sans text-sm font-semibold uppercase tracking-wider text-titanium mb-3 transition-colors duration-300 group-focus-within:text-crimson"
+                  >
+                    Phone <span className="text-crimson">*</span>
+                  </label>
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    autoComplete="tel"
+                    placeholder="(305) 000-0000"
+                    pattern="[\(]?[0-9]{3}[\)]?[\s\-]?[0-9]{3}[\s\-]?[0-9]{4}"
+                    className="w-full bg-white border-2 border-titanium/30 px-4 py-4 font-body text-midnight placeholder:text-titanium/40 focus:outline-none focus:border-crimson focus:shadow-[0_0_0_3px_rgba(139,0,0,0.1)] transition-all duration-300 hover:border-titanium/50 invalid:border-crimson/30 [&:not(:placeholder-shown):not(:focus):invalid]:border-crimson [&:not(:placeholder-shown):not(:focus):invalid]:text-crimson"
+                    required
+                  />
+                </div>
               </div>
 
+              {/* Case Description */}
               <div className="group">
-                <label className="block font-sans text-sm font-semibold uppercase tracking-wider text-titanium mb-2 transition-colors duration-300 group-focus-within:text-crimson">
-                  What happened?
+                <label
+                  htmlFor="message"
+                  className="block font-sans text-sm font-semibold uppercase tracking-wider text-titanium mb-3 transition-colors duration-300 group-focus-within:text-crimson"
+                >
+                  Brief Case Description <span className="text-crimson">*</span>
                 </label>
                 <textarea
+                  id="message"
+                  name="message"
                   rows={6}
-                  className="w-full bg-white border border-titanium/40 p-4 font-body text-midnight focus:outline-none focus:border-2 focus:border-crimson transition-all duration-300 resize-none hover:border-titanium"
+                  placeholder="Provide a brief description of your legal matter. All communications are confidential."
+                  className="w-full bg-white border-2 border-titanium/30 px-4 py-4 font-body text-midnight placeholder:text-titanium/40 focus:outline-none focus:border-crimson focus:shadow-[0_0_0_3px_rgba(139,0,0,0.1)] transition-all duration-300 resize-none hover:border-titanium/50"
                   required
+                  minLength={10}
                 />
+                <p className="mt-2 text-xs text-titanium/60 font-sans">
+                  This form creates an inquiry, not an attorney-client relationship
+                </p>
               </div>
 
-              <button type="submit" className="btn-primary w-full group">
-                <span className="relative">Begin</span>
-              </button>
+              {/* Submit Button */}
+              <div className="pt-4">
+                <button
+                  type="submit"
+                  className="btn-primary w-full group relative overflow-hidden"
+                >
+                  <span className="relative z-10">Request Consultation</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-crimson/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </button>
+                <p className="mt-4 text-center text-sm text-titanium/70 font-sans">
+                  Response within 24 business hours
+                </p>
+              </div>
             </form>
           </ScrollReveal>
         </div>
