@@ -33,13 +33,13 @@ export default function AboutPage() {
             </ScrollReveal>
 
             <ScrollReveal delay={200}>
-              <div className="relative max-w-md mx-auto">
+              <div className="relative max-w-sm mx-auto">
                 <div className="absolute inset-0 bg-crimson/20 translate-x-4 translate-y-4"></div>
                 <Image
                   src="/portrait-bo-porta.webp"
                   alt="Bolivar C. Porta"
-                  width={420}
-                  height={560}
+                  width={315}
+                  height={420}
                   className="relative z-10 w-full"
                 />
               </div>
