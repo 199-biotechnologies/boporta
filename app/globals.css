@@ -125,4 +125,42 @@
   .animate-on-scroll {
     animation: fade-in-scale 0.6s ease-out forwards;
   }
+
+  /* Jony Ive-inspired subtle animations */
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeInScale {
+    0% {
+      opacity: 0;
+      transform: scaleY(0);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scaleY(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: scaleY(1);
+    }
+  }
 }

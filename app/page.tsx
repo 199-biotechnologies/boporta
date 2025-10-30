@@ -50,12 +50,12 @@ export default function Home() {
           </div>
 
           {/* Main Headline */}
-          <div className="flex items-center justify-center mb-8 animate-fade-in-delay-1">
-            <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-bone text-right pr-6 md:pr-8">
+          <div className="flex items-center justify-center mb-8">
+            <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-bone md:text-right md:w-[280px] lg:w-[420px] pr-6 md:pr-8 animate-[slideInLeft_1.2s_cubic-bezier(0.16,1,0.3,1)_0.3s_both]">
               FAMILY
             </h2>
-            <span className="inline-block w-px h-16 md:h-20 bg-bone/80 flex-shrink-0"></span>
-            <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-bone text-left pl-6 md:pl-8">
+            <span className="inline-block w-px h-16 md:h-20 bg-bone/80 flex-shrink-0 animate-[fadeInScale_1.5s_cubic-bezier(0.16,1,0.3,1)_0.8s_both]"></span>
+            <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-bone md:text-left md:w-[280px] lg:w-[420px] pl-6 md:pl-8 animate-[slideInRight_1.2s_cubic-bezier(0.16,1,0.3,1)_0.3s_both]">
               CRIMINAL
             </h2>
           </div>
