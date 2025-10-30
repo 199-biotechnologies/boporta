@@ -10,7 +10,7 @@ export default function BlogPost() {
   return (
     <main className="min-h-screen">
       {/* Header */}
-      <section className="section-padding bg-midnight text-bone pt-20">
+      <section className="bg-midnight text-bone pt-20 pb-16">
         <div className="container-custom max-w-4xl">
           <ScrollReveal>
             <Link href="/blog" className="inline-flex items-center gap-2 font-sans text-sm uppercase tracking-wider text-bone/60 hover:text-bone transition-colors mb-8">
@@ -46,7 +46,7 @@ export default function BlogPost() {
       </section>
 
       {/* Content */}
-      <section className="section-padding bg-bone">
+      <section className="py-16 md:py-20 bg-bone">
         <div className="container-custom max-w-3xl">
           <article className="font-body text-lg leading-relaxed space-y-8">
             <ScrollReveal>
