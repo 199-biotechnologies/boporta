@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
 export default function Navigation() {
@@ -8,6 +9,7 @@ export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -74,13 +76,17 @@ export default function Navigation() {
     { href: '/blog', label: 'Blog' },
   ];
 
+  const isHomepage = pathname === '/';
+
   return (
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${
           isScrolled
             ? 'bg-midnight backdrop-blur-md shadow-xl border-b border-bone/5'
-            : 'bg-midnight/95 backdrop-blur-md shadow-sm'
+            : isHomepage
+              ? 'bg-transparent'
+              : 'bg-midnight/95 backdrop-blur-md shadow-sm'
         }`}
       >
         <div className="container-custom">
