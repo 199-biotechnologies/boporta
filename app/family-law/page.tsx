@@ -14,7 +14,7 @@ export default function FamilyLawPage() {
         <div className="container-custom max-w-4xl text-center">
           <ScrollReveal>
             <div className="inline-block mb-8">
-              <div className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-6 relative">
+              <div className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-6 relative animate-hero-icon">
                 <Image
                   src="/family-law.svg"
                   alt="Family Law"

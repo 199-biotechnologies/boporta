@@ -251,4 +251,36 @@
   .animate-hero-divider {
     animation: fadeInScale 1.5s cubic-bezier(0.16,1,0.3,1) 0.8s both;
   }
+
+  /* Hero SVG Icon Animations - Subtle & Professional */
+  @keyframes heroIconFloat {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  @keyframes heroIconFadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.9) translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  .animate-hero-icon {
+    animation: heroIconFadeIn 1.2s cubic-bezier(0.16,1,0.3,1) 0.2s both,
+               heroIconFloat 6s ease-in-out 1.5s infinite;
+    transition: transform 300ms cubic-bezier(0.16,1,0.3,1);
+  }
+
+  .animate-hero-icon:hover {
+    transform: scale(1.08) translateY(-4px);
+    animation-play-state: paused; /* Pause float on hover */
+  }
 }
