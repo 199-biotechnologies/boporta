@@ -126,27 +126,35 @@ export default function FAQPage() {
         <div className="container-custom max-w-4xl">
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <ScrollReveal key={index} delay={index * 30}>
-                <div className="border border-titanium/20 bg-white">
+              <ScrollReveal key={index} delay={index * 20}>
+                <div className={`border transition-all duration-500 ease-out ${
+                  openIndex === index
+                    ? 'border-crimson/40 bg-bone shadow-lg'
+                    : 'border-titanium/10 bg-white hover:border-titanium/30 hover:shadow-md'
+                }`}>
                   <button
                     onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                    className="w-full text-left p-6 flex items-start justify-between gap-4 hover:bg-bone/50 transition-colors"
+                    className="w-full text-left p-6 md:p-8 flex items-start justify-between gap-6 transition-all duration-300"
                   >
-                    <h3 className="font-display text-lg md:text-xl font-bold flex-1">
+                    <h3 className={`font-display text-lg md:text-xl font-bold flex-1 transition-colors duration-300 ${
+                      openIndex === index ? 'text-midnight' : 'text-midnight/90'
+                    }`}>
                       {faq.question}
                     </h3>
-                    <div className={`flex-shrink-0 transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}>
-                      <svg className="w-6 h-6 text-crimson" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className={`flex-shrink-0 transition-all duration-500 ease-out ${
+                      openIndex === index ? 'rotate-180 text-crimson scale-110' : 'text-titanium/60'
+                    }`}>
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     </div>
                   </button>
                   <div
-                    className={`overflow-hidden transition-all duration-300 ${
-                      openIndex === index ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
+                    className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                      openIndex === index ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
                     }`}
                   >
-                    <div className="p-6 pt-0 font-body text-midnight/80 leading-relaxed">
+                    <div className="px-6 md:px-8 pb-6 md:pb-8 font-body text-base md:text-lg text-midnight/80 leading-relaxed whitespace-pre-line">
                       {faq.answer}
                     </div>
                   </div>
