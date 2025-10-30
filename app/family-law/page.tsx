@@ -16,7 +16,7 @@ export default function FamilyLawPage() {
             <div className="inline-block mb-8">
               <div className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-6 relative">
                 <Image
-                  src="/family.svg"
+                  src="/family-law.svg"
                   alt="Family Law"
                   fill
                   className="object-contain brightness-0 invert"
