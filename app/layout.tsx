@@ -38,22 +38,29 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://bolivarporta.com",
     siteName: "Bolivar C. Porta, P.A.",
-    title: "Bo Porta | Miami Trial Attorney | Criminal Defense & Family Law",
-    description: "1,550+ cases over 29 years. Avvo 8.6 Excellent rating. Best DUI Lawyer Miami 2016-2022. Former Public Defender.",
+    title: "Bo Porta | Miami Trial Attorney | Criminal Defense & Family Law | 1,550+ Cases",
+    description: "Bolívar C. Porta: Miami's premier trial attorney. 29 years experience, 1,550+ cases, Avvo 8.6 Excellent rating, 5 Expertise.com awards. Former Public Defender. Dual expertise in criminal defense & family law. Licensed Florida Bar 1996, Federal Court admitted.",
     images: [
       {
-        url: "/portrait-bo-porta.webp",
+        url: "https://bolivarporta.com/portrait-bo-porta.webp",
         width: 315,
         height: 420,
-        alt: "Bolivar C. Porta, Miami criminal defense and family law attorney",
+        alt: "Bolivar C. Porta, Miami trial attorney with 29 years experience in criminal defense and family law",
+        type: "image/webp",
       },
     ],
+    countryName: "United States",
+    emails: ["info@boporta.com"],
+    phoneNumbers: ["+13053715060"],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Bo Porta | Miami Criminal Defense & Family Law Attorney",
-    description: "29 years experience. 1,550+ cases. Avvo 8.6 Excellent. Former Public Defender.",
+    site: "@bolivarporta",
+    creator: "@bolivarporta",
+    title: "Bo Porta | Miami Criminal Defense & Family Law Attorney | 29 Years",
+    description: "Bolívar C. Porta - 29 years experience, 1,550+ cases, Avvo 8.6 Excellent, Former Public Defender. Dual practice: Criminal Defense & Family Law. Miami's trusted trial attorney since 1996.",
+    images: ["https://bolivarporta.com/portrait-bo-porta.webp"],
   },
 
   robots: {

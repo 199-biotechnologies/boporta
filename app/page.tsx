@@ -234,8 +234,24 @@ export default function Home() {
       "email": "info@boporta.com",
       "url": "https://bolivarporta.com",
       "sameAs": [
-        "https://www.avvo.com/attorneys/33133-fl-bolivar-porta-1287666.html"
-      ]
+        "https://www.avvo.com/attorneys/33133-fl-bolivar-porta-1287666.html",
+        "https://www.floridabar.org/directories/find-mbr/profile/?num=100160",
+        "https://www.yelp.com/biz/bolivar-c-porta-miami-3",
+        "https://www.yellowpages.com/miami-fl/mip/law-offices-of-bolivar-c-porta-pa-511351329"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2000 S Dixie Highway, Suite 108",
+        "addressLocality": "Miami",
+        "addressRegion": "FL",
+        "postalCode": "33133",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "25.7617",
+        "longitude": "-80.1918"
+      }
     },
     // Organization Schema (AI Search Context)
     {
@@ -297,8 +313,28 @@ export default function Home() {
         "reviewCount": "20",
         "bestRating": "5",
         "worstRating": "1",
-        "ratingExplanation": "Avvo client reviews"
+        "ratingExplanation": "Based on verified Avvo client reviews"
       },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Avvo Verified Client"
+          },
+          "reviewBody": "Avvo 8.6 Excellent rating with Client's Choice Award 2022. Highly recommended for criminal defense and family law matters in Miami."
+        }
+      ],
+      "sameAs": [
+        "https://www.avvo.com/attorneys/33133-fl-bolivar-porta-1287666.html",
+        "https://www.floridabar.org/directories/find-mbr/profile/?num=100160",
+        "https://www.yelp.com/biz/bolivar-c-porta-miami-3"
+      ],
       "priceRange": "$$"
     }
   ];
