@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Crimson_Text, Inter } from "next/font/google";
 import "./globals.css";
 
@@ -27,17 +27,25 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://bolivarporta.com'),
   title: "Bo Porta | Miami Criminal Defense & Family Law Attorney | 1,550+ Cases",
   description: "Miami trial attorney with 29 years experience. Avvo 8.6 rated. 750+ criminal defense cases, 500+ family law cases. Former Public Defender. Federal Court admitted.",
-  keywords: "Miami criminal defense attorney, family law lawyer Miami, DUI lawyer Miami, divorce attorney Miami, domestic violence lawyer, trial attorney, Bo Porta, Bolivar Porta",
-  authors: [{ name: "Bolivar C. Porta, P.A." }],
+  keywords: "Miami criminal defense attorney, family law lawyer Miami, DUI lawyer Miami, divorce attorney Miami, domestic violence lawyer, trial attorney, Bo Porta, Bolívar Porta",
+  authors: [{ name: "Bolívar C. Porta, P.A." }],
   alternates: {
     canonical: 'https://bolivarporta.com',
+  },
+  icons: {
+    icon: '/bp-mini-logo.svg',
+  },
+  formatDetection: {
+    telephone: true,
+    address: true,
+    email: true,
   },
 
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://bolivarporta.com",
-    siteName: "Bolivar C. Porta, P.A.",
+    siteName: "Bolívar C. Porta, P.A.",
     title: "Bo Porta | Miami Trial Attorney | Criminal Defense & Family Law | 1,550+ Cases",
     description: "Bolívar C. Porta: Miami's premier trial attorney. 29 years experience, 1,550+ cases, Avvo 8.6 Excellent rating, 5 Expertise.com awards. Former Public Defender. Dual expertise in criminal defense & family law. Licensed Florida Bar 1996, Federal Court admitted.",
     images: [
@@ -45,7 +53,7 @@ export const metadata: Metadata = {
         url: "https://bolivarporta.com/portrait-bo-porta.webp",
         width: 315,
         height: 420,
-        alt: "Bolivar C. Porta, Miami trial attorney with 29 years experience in criminal defense and family law",
+        alt: "Bolívar C. Porta, Miami trial attorney with 29 years experience in criminal defense and family law",
         type: "image/webp",
       },
     ],
@@ -84,6 +92,13 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#0A1929',
+  colorScheme: 'light',
+};
+
 import Navigation from "./components/Navigation";
 import CallbackWidget from "./components/CallbackWidget";
 
@@ -95,6 +110,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${crimson.variable} ${inter.variable}`}>
       <body>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 bg-bone text-midnight px-4 py-2 shadow"
+        >
+          Skip to content
+        </a>
         <Navigation />
         {children}
         <CallbackWidget />

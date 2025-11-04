@@ -4,6 +4,12 @@ import { useState } from 'react';
 import ScrollReveal from "../components/ScrollReveal";
 import SchemaMarkup from "../components/SchemaMarkup";
 
+export const metadata = {
+  title: 'FAQ | Bo Porta – Miami Criminal Defense & Family Law',
+  description: 'Frequently asked questions about divorce, custody, support, arrests, and criminal charges in Miami. Practical answers from a 25+ year trial attorney.',
+  alternates: { canonical: 'https://bolivarporta.com/faq' },
+};
+
 export default function FAQPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -104,8 +110,20 @@ export default function FAQPage() {
     ]
   };
 
+  // Build FAQPage schema for rich results
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+    })),
+  };
+
   return (
-    <main className="min-h-screen">
+    <main id="main-content" className="min-h-screen">
+      <SchemaMarkup schema={faqSchema} />
       <SchemaMarkup schema={[faqSchema, breadcrumbSchema]} />
       {/* Hero */}
       <section className="min-h-[400px] md:min-h-[500px] flex items-center bg-midnight text-bone">

@@ -1,14 +1,24 @@
 import Image from "next/image";
 import ScrollReveal from "../components/ScrollReveal";
+import SchemaMarkup from "../components/SchemaMarkup";
 
 export const metadata = {
   title: "Family Law Attorney Miami | Divorce, Custody, Support | Bo Porta",
   description: "Experienced Miami family law attorney. Divorce, child custody, timesharing, alimony, property division. 25 years protecting families.",
+  alternates: { canonical: 'https://bolivarporta.com/family-law' },
 };
 
 export default function FamilyLawPage() {
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Family Law',
+    areaServed: [{ '@type': 'City', name: 'Miami' }, { '@type': 'AdministrativeArea', name: 'Miami-Dade County' }],
+    provider: { '@type': 'LegalService', name: 'Bolívar C. Porta, P.A.', url: 'https://bolivarporta.com' },
+  };
   return (
-    <main className="min-h-screen">
+    <main id="main-content" className="min-h-screen">
+      <SchemaMarkup schema={serviceSchema} />
       {/* Hero */}
       <section className="min-h-[500px] md:min-h-[600px] flex items-center bg-midnight text-bone">
         <div className="container-custom max-w-4xl text-center">

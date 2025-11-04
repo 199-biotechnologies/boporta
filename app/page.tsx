@@ -80,7 +80,7 @@ export default function Home() {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "@id": "https://bolivarporta.com",
-      "name": "Bolivar C. Porta, P.A.",
+      "name": "Bolívar C. Porta, P.A.",
       "image": "https://bolivarporta.com/portrait-bo-porta.webp",
       "telephone": "+1-305-371-5060",
       "email": "info@boporta.com",
@@ -155,7 +155,7 @@ export default function Home() {
       "description": "Miami trial attorney with 29 years experience in criminal defense and family law. Former Public Defender for Miami-Dade County. Licensed in Florida Bar since 1996 and U.S. District Court, Southern District of Florida.",
       "worksFor": {
         "@type": "LegalService",
-        "name": "Bolivar C. Porta, P.A.",
+        "name": "Bolívar C. Porta, P.A.",
         "url": "https://bolivarporta.com"
       },
       "alumniOf": [
@@ -258,8 +258,8 @@ export default function Home() {
     {
       "@context": "https://schema.org",
       "@type": "LegalService",
-      "name": "Bolivar C. Porta, P.A.",
-      "legalName": "Bolivar C. Porta, P.A.",
+      "name": "Bolívar C. Porta, P.A.",
+      "legalName": "Bolívar C. Porta, P.A.",
       "url": "https://bolivarporta.com",
       "logo": "https://bolivarporta.com/portrait-bo-porta.webp",
       "image": "https://bolivarporta.com/portrait-bo-porta.webp",
@@ -341,7 +341,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="min-h-screen">
+    <main id="main-content" className="min-h-screen">
       <SchemaMarkup schema={schemas} />
 
       {/* Hero Section */}
@@ -349,7 +349,7 @@ export default function Home() {
         <div className="absolute inset-0 opacity-40">
           <Image
             src="/portrait-bo-porta.webp"
-            alt="Bolivar C. Porta, Miami criminal defense and family law trial attorney with 29 years of experience"
+            alt="Bolívar C. Porta, Miami criminal defense and family law trial attorney with 29 years of experience"
             fill
             className="object-cover"
             priority
@@ -1031,7 +1031,7 @@ export default function Home() {
             bolivarporta.com
           </p>
           <p className="text-titanium mt-4 text-xs">
-            © 1998–2025 Bolivar C. Porta, P.A. • Appointments by arrangement only
+            © 1998–2025 Bolívar C. Porta, P.A. • Appointments by arrangement only
           </p>
         </div>
       </footer>

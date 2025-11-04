@@ -1,14 +1,24 @@
 import Image from "next/image";
 import ScrollReveal from "../components/ScrollReveal";
+import SchemaMarkup from "../components/SchemaMarkup";
 
 export const metadata = {
   title: "Criminal Defense Lawyer Miami | DUI, Domestic Violence | Bo Porta",
   description: "Aggressive Miami criminal defense attorney. DUI, domestic violence, drug offenses, white collar crime. Former public defender. 25 years trial experience.",
+  alternates: { canonical: 'https://bolivarporta.com/criminal-defense' },
 };
 
 export default function CriminalDefensePage() {
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Criminal Defense',
+    areaServed: [{ '@type': 'City', name: 'Miami' }, { '@type': 'AdministrativeArea', name: 'Miami-Dade County' }],
+    provider: { '@type': 'LegalService', name: 'Bolívar C. Porta, P.A.', url: 'https://bolivarporta.com' },
+  };
   return (
-    <main className="min-h-screen">
+    <main id="main-content" className="min-h-screen">
+      <SchemaMarkup schema={serviceSchema} />
       {/* Hero */}
       <section className="min-h-[500px] md:min-h-[600px] flex items-center bg-midnight text-bone">
         <div className="container-custom max-w-4xl text-center">

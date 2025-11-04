@@ -112,6 +112,7 @@ export default function Navigation() {
                 <Link
                   key={link.href}
                   href={link.href}
+                  aria-current={pathname === link.href ? 'page' : undefined}
                   className="font-sans text-sm uppercase tracking-wider text-bone/80 hover:text-bone transition-all duration-300 relative group"
                 >
                   {link.label}

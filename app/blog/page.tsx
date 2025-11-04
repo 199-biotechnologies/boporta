@@ -4,6 +4,7 @@ import ScrollReveal from "../components/ScrollReveal";
 export const metadata = {
   title: "Legal Insights Blog | Family Law & Criminal Defense | Bo Porta",
   description: "Strategic insights on family law and criminal defense from 25+ years of trial experience. Miami attorney Bo Porta on custody, divorce, criminal charges.",
+  alternates: { canonical: 'https://bolivarporta.com/blog' },
 };
 
 const blogPosts = [
@@ -27,7 +28,7 @@ const blogPosts = [
 
 export default function BlogPage() {
   return (
-    <main className="min-h-screen">
+    <main id="main-content" className="min-h-screen">
       {/* Hero */}
       <section className="min-h-[400px] md:min-h-[500px] flex items-center bg-midnight text-bone">
         <div className="container-custom max-w-4xl text-center">

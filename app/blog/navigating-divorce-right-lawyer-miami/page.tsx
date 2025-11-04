@@ -1,14 +1,43 @@
 import Link from "next/link";
 import ScrollReveal from "../../components/ScrollReveal";
+import SchemaMarkup from "../../components/SchemaMarkup";
 
 export const metadata = {
   title: "Navigating Divorce: Finding the Right Lawyer in Miami | Bo Porta",
   description: "Six essential considerations when selecting Miami divorce attorney. Experience, compatibility, and cost transparency determine whether your divorce protects or damages your future.",
+  alternates: {
+    canonical: 'https://bolivarporta.com/blog/navigating-divorce-right-lawyer-miami',
+  },
 };
 
 export default function BlogPost() {
+  const url = 'https://bolivarporta.com/blog/navigating-divorce-right-lawyer-miami';
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'Navigating Divorce: Finding the Right Lawyer in Miami, Florida',
+    description:
+      'Six essential considerations when selecting Miami divorce attorney. Experience, compatibility, and cost transparency determine whether your divorce protects or damages your future.',
+    author: { '@type': 'Person', name: 'Bolívar C. Porta' },
+    datePublished: '2025-10-03',
+    dateModified: '2025-10-03',
+    mainEntityOfPage: url,
+    publisher: { '@type': 'Organization', name: 'Bolívar C. Porta, P.A.' },
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://bolivarporta.com' },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://bolivarporta.com/blog' },
+      { '@type': 'ListItem', position: 3, name: 'Navigating Divorce: Finding the Right Lawyer in Miami, Florida', item: url },
+    ],
+  };
+
   return (
-    <main className="min-h-screen">
+    <main id="main-content" className="min-h-screen">
+      <SchemaMarkup schema={[articleSchema, breadcrumbSchema]} />
       {/* Header */}
       <section className="bg-midnight text-bone pt-20 pb-16">
         <div className="container-custom max-w-4xl">

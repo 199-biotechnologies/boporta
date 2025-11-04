@@ -35,7 +35,7 @@ export default function AboutPage() {
   };
 
   return (
-    <main className="min-h-screen">
+    <main id="main-content" className="min-h-screen">
       <SchemaMarkup schema={breadcrumbSchema} />
       {/* Hero Section */}
       <section className="py-32 md:py-40 bg-midnight text-bone">
@@ -66,7 +66,7 @@ export default function AboutPage() {
                 <div className="absolute inset-0 bg-crimson/20 translate-x-4 translate-y-4"></div>
                 <Image
                   src="/portrait-bo-porta.webp"
-                  alt="Bolivar C. Porta, Miami trial attorney with 29 years experience in family law and criminal defense"
+                  alt="Bolívar C. Porta, Miami trial attorney with 29 years experience in family law and criminal defense"
                   width={315}
                   height={420}
                   className="relative z-10 w-full"
@@ -199,7 +199,7 @@ export default function AboutPage() {
             <ScrollReveal delay={100}>
               <div className="border-l-2 border-crimson pl-6">
                 <div className="font-display text-xl font-bold mb-2">Trial Attorney</div>
-                <div className="font-sans text-sm uppercase tracking-wider text-titanium mb-2">Bolivar C. Porta, P.A. | 1998–Present</div>
+                <div className="font-sans text-sm uppercase tracking-wider text-titanium mb-2">Bolívar C. Porta, P.A. | 1998–Present</div>
                 <p className="font-body text-midnight/80 leading-relaxed">
                   Independent practice focused on family law and criminal defense throughout South Florida.
                 </p>
