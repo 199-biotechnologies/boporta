@@ -9,13 +9,22 @@ Professional website for Miami-based trial attorney Bo Porta, specializing in Fa
 
 ## Technology Stack
 
-- **Framework:** Next.js 15.1.6 (App Router)
-- **Language:** TypeScript 5
-- **UI Library:** React 19
-- **Styling:** Tailwind CSS 3.4.18
+- **Framework:** Next.js 15.1.6 (App Router) - *Latest stable v15*
+- **Language:** TypeScript 5 - *Latest stable*
+- **UI Library:** React 19.0.0 - *Latest stable*
+- **Styling:** Tailwind CSS 3.4.18 - *Latest v3*
+- **Email:** Resend 6.3.0
 - **Fonts:** Google Fonts (Playfair Display, Crimson Text, Inter)
 - **Deployment:** Vercel (Edge Network)
 - **Version Control:** Git + GitHub
+
+### Version Notes
+
+**Why Not Next.js 16 or Tailwind v4?**
+- Next.js 16.0.1 is available but recently released (stability concerns)
+- Tailwind CSS v4 (4.1.16) has significant breaking changes requiring migration
+- Current stack (Next.js 15.1.6 + Tailwind 3.4.18) is production-proven and stable
+- Will evaluate upgrading after Next.js 16.1+ and community testing confirms stability
 
 ---
 
@@ -144,13 +153,75 @@ legal/
 
 All OG images generated using Next.js `ImageResponse` API (edge runtime).
 
-#### AI Search Optimization
-- ✅ AI crawler access (ChatGPT, Claude, Perplexity, Gemini)
-- ✅ Entity verification with sameAs schema (4 external sources)
-- ✅ Citations and statistics throughout content
-- ✅ Quick Answer format for voice search
-- ✅ Comparison tables for structured data
-- ✅ Recency signals (last updated dates)
+#### AI Search Optimization (GEO/LLMO/AEO)
+
+**Advanced AI Visibility Strategy:**
+
+**Entity Recognition & Knowledge Graph Integration:**
+- ✅ Multi-source entity verification (sameAs schema: Avvo, Florida Bar, Yelp, YellowPages)
+- ✅ Person schema with E-E-A-T signals (Experience, Expertise, Authoritativeness, Trustworthiness)
+- ✅ Professional credentials verification (Florida Bar #109742 since 1996, Federal Court admission)
+- ✅ Educational provenance (Tulane University Law School J.D. 1996)
+- ✅ Professional associations (6 legal organizations for entity authority)
+- ✅ Geographic entity optimization (geo coordinates, Miami-Dade County served)
+- ✅ Aggregate ratings schema (5.0/5.0 from 20 reviews)
+
+**AI Crawler Access & Indexing:**
+- ✅ ChatGPT (OAI-SearchBot) - Full access granted
+- ✅ Claude (ClaudeBot) - Full access granted
+- ✅ Perplexity (PerplexityBot) - Full access granted
+- ✅ Google Gemini (GoogleOther, Google-Extended) - Full access granted
+- ✅ Meta AI (FacebookBot) - Full access granted
+- ✅ Common Crawl (CCBot) - For AI training datasets
+- ✅ Dynamic robots.ts with sitemap reference
+
+**Citation Optimization (+40% GEO Boost):**
+- ✅ Government statistics integration (Florida DHSMV, FBI UCR, Miami-Dade Courts)
+- ✅ Legal statute citations (Florida Statute §61.19, §61.30, §316.193, etc.)
+- ✅ Authoritative source attribution (American Academy of Matrimonial Lawyers, Florida Bar)
+- ✅ Case law references (Miranda v. Arizona, 384 U.S. 436)
+- ✅ Research-backed claims with inline sources
+- ✅ Statistical evidence throughout (33,140 DUI arrests, 40% first-time offenders)
+
+**Structured Data for AI Parsing:**
+- ✅ FAQPage schema with 15 comprehensive Q&A pairs
+- ✅ Comparison tables (Florida DUI Penalty matrix with 7 categories)
+- ✅ Quick Answer format optimized for voice search and AI extraction
+- ✅ Hierarchical heading structure (H1 → H6 semantic organization)
+- ✅ BreadcrumbList schema for navigation context
+- ✅ Review schema with peer attorney testimonials
+
+**Voice Search & Featured Snippet Optimization:**
+- ✅ Natural language query matching ("How much does divorce cost in Miami?")
+- ✅ Immediate answer format (Quick Answer → Detailed Explanation → Sources)
+- ✅ Conversational tone for voice assistant compatibility
+- ✅ Question-based heading structure
+
+**Recency & Freshness Signals:**
+- ✅ Last updated timestamps on all pages ("Last Updated: March 2025")
+- ✅ Current year in all citations and statistics (2024/2025)
+- ✅ article:modified_time metadata
+- ✅ Dynamic sitemap with lastModified dates
+
+**Social Signals & Brand Mentions:**
+- ✅ Enhanced OpenGraph metadata with absolute URLs
+- ✅ Twitter Cards (summary_large_image)
+- ✅ Professional social media presence indicators
+- ✅ Third-party validation (Avvo 8.6 rating, Client's Choice Award 2022)
+- ✅ Peer endorsements from fellow attorneys
+
+**Content Architecture for AI:**
+- ✅ Topic clustering (Family Law, Criminal Defense as distinct entities)
+- ✅ Semantic keyword optimization (natural language, not keyword stuffing)
+- ✅ Long-form comprehensive content (FAQ answers 200-500 words)
+- ✅ Specific over vague (29 years, 1,550+ cases, $2.1M vs. generic claims)
+- ✅ Evidence-based claims (every statistic cited with source)
+
+**AI Testing & Validation:**
+- Manual testing protocol for ChatGPT, Perplexity, Claude
+- Query monitoring: "best criminal defense lawyer Miami", "DUI attorney Miami"
+- Citation tracking and optimization based on AI responses
+- Iterative content refinement based on AI feedback patterns
 
 ### Design System
 
@@ -287,7 +358,8 @@ No environment variables required for basic functionality.
 **Copyright © 2025 Bolívar C. Porta, P.A.**
 All rights reserved.
 
-**Website Design & Development:** Built with Next.js, React, TypeScript, and Tailwind CSS
+**Website Design & Development:** Boris Djordjevic
+**Tech Stack:** Next.js 15, React 19, TypeScript 5, Tailwind CSS 3.4
 **Deployed on:** Vercel Edge Network
 **Version Control:** GitHub (199-biotechnologies/boporta)
 
