@@ -401,6 +401,11 @@ All rights reserved.
 - [ ] Blog content expansion (10+ articles)
 - [ ] Local business citations
 - [ ] Wikipedia/Wikidata entity creation
+- [ ] Grokipedia entity submission (xAI's AI encyclopedia - launched Oct 2025)
+  - Submit corrections/entity information through Grokipedia feedback system
+  - Requires X/Google/Email/Apple account login
+  - AI-verified submissions with primary source evidence
+  - Complements traditional Wikipedia for AI search visibility
 - [ ] Guest posts on legal authority sites
 - [ ] Media presence (podcasts, interviews)
 - [ ] Reddit/Quora engagement
