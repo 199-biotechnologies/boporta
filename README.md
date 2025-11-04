@@ -3,7 +3,7 @@
 Professional website for Miami-based trial attorney Bo Porta, specializing in Family Law and Criminal Defense.
 
 **Live Site:** https://bolivarporta.com
-**Repository:** https://github.com/199-biotechnologies/legal
+**Repository:** https://github.com/199-biotechnologies/boporta
 
 ---
 
@@ -184,8 +184,8 @@ All OG images generated using Next.js `ImageResponse` API (edge runtime).
 ### Setup
 ```bash
 # Clone repository
-git clone https://github.com/199-biotechnologies/legal.git
-cd legal
+git clone https://github.com/199-biotechnologies/boporta.git
+cd boporta
 
 # Install dependencies
 npm install
@@ -289,7 +289,7 @@ All rights reserved.
 
 **Website Design & Development:** Built with Next.js, React, TypeScript, and Tailwind CSS
 **Deployed on:** Vercel Edge Network
-**Version Control:** GitHub (199-biotechnologies/legal)
+**Version Control:** GitHub (199-biotechnologies/boporta)
 
 ---
 
