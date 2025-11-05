@@ -104,9 +104,43 @@ export default function FAQClient() {
     ]
   };
 
+  // HowTo Schema for "What to do after arrest" - Voice search optimization
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "What to Do Immediately After Being Arrested",
+    "description": "Step-by-step guide on protecting your rights immediately after arrest in Miami, Florida",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Remain Silent",
+        "text": "Invoke your 5th Amendment right by saying 'I want a lawyer.' Remain completely silent - anything you say WILL be used against you."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Request an Attorney",
+        "text": "Say only 'I want a lawyer.' Call (305) 371-5060 immediately for legal representation."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Refuse Consent to Searches",
+        "text": "Do NOT consent to searches of phone, car, or home. Police need warrants. Be polite but firm."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Do Not Discuss Your Case",
+        "text": "Do NOT discuss your case with cellmates (often informants) or on recorded jail phone lines. Only attorney-client conversations are legally protected."
+      }
+    ]
+  };
+
   return (
     <main id="main-content" className="min-h-screen">
-      <SchemaMarkup schema={[faqSchema, breadcrumbSchema]} />
+      <SchemaMarkup schema={[faqSchema, breadcrumbSchema, howToSchema]} />
       {/* Hero */}
       <section className="min-h-[400px] md:min-h-[500px] flex items-center bg-midnight text-bone">
         <div className="container-custom max-w-4xl text-center">

@@ -367,6 +367,23 @@ All rights reserved.
 
 ## Recent Updates
 
+**November 2025:**
+- ✅ Enhanced Service schema on Family Law and Criminal Defense pages
+  - Added LegalService schema with comprehensive service catalogs
+  - Included contact points and available channels for voice search
+  - Optimized for Siri, Google Assistant, and Alexa queries
+- ✅ Added HowTo schema for arrest procedures (FAQ page)
+  - Step-by-step guide optimized for voice assistants
+  - Featured snippet optimization for "what to do after arrest"
+- ✅ Cleaned up repository (removed OCD changelog files)
+- ✅ Enhanced AI SEO documentation in README
+- ✅ Added version stability notes (Next.js 15, Tailwind 3.4)
+- ✅ Added Boris Djordjevic as website developer in credits
+- ✅ Added Grokipedia to SEO roadmap
+- ✅ Created voice search & local SEO priority roadmap
+- ✅ Repository renamed from "legal" to "boporta"
+- ✅ Repository made public on GitHub (199-biotechnologies/boporta)
+
 **March 2025:**
 - ✅ Added dynamic OpenGraph image generation for all pages
 - ✅ Implemented blog post dynamic OG images
@@ -378,10 +395,12 @@ All rights reserved.
 - ✅ Made repository public on GitHub
 
 **Technical Improvements:**
+- Enhanced schema markup for voice search optimization
+- Added Service schema with OfferCatalog and ContactPoint
+- Implemented HowTo schema for FAQ procedures
 - Split FAQ into server (`page.tsx`) and client (`FAQClient.tsx`) components
 - Resolved Next.js 15 metadata export restrictions
 - Optimized OpenGraph images for social sharing (1200x630px)
-- Enhanced schema markup for better SEO
 
 ---
 
@@ -397,9 +416,22 @@ All rights reserved.
 - [ ] Newsletter signup
 - [ ] Client portal
 
+### Voice Search & Local SEO (Critical Priority)
+- [ ] **Apple Maps / Apple Business Connect** ⚠️ **CRITICAL**
+  - Claim business listing at https://business.apple.com
+  - Verification via phone call or document upload
+  - Essential for Siri voice search ("find criminal defense lawyer Miami")
+  - Impact: 75-100M monthly Apple Maps users
+  - Timeline: 5-10 business days for verification
+- [ ] **Yelp Business Listing** ⚠️ **HIGH PRIORITY**
+  - Claim/verify listing at https://biz.yelp.com
+  - Siri pulls business data from Yelp
+  - Add reviews, photos, complete NAP (Name, Address, Phone)
+  - Respond to reviews for engagement
+
 ### SEO Enhancements
 - [ ] Blog content expansion (10+ articles)
-- [ ] Local business citations
+- [ ] Local business citations (Google Business Profile, Bing Places, etc.)
 - [ ] Wikipedia/Wikidata entity creation
 - [ ] Grokipedia entity submission (xAI's AI encyclopedia - launched Oct 2025)
   - Submit corrections/entity information through Grokipedia feedback system

@@ -11,10 +11,79 @@ export const metadata = {
 export default function CriminalDefensePage() {
   const serviceSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Service',
-    serviceType: 'Criminal Defense',
-    areaServed: [{ '@type': 'City', name: 'Miami' }, { '@type': 'AdministrativeArea', name: 'Miami-Dade County' }],
-    provider: { '@type': 'LegalService', name: 'Bolívar C. Porta, P.A.', url: 'https://bolivarporta.com' },
+    '@type': 'LegalService',
+    name: 'Criminal Defense Attorney Services',
+    description: 'Comprehensive criminal defense representation including DUI, domestic violence, drug offenses, white collar crime, and federal court defense in Miami, Florida.',
+    serviceType: 'Criminal Defense Attorney',
+    provider: {
+      '@type': 'Attorney',
+      name: 'Bolívar C. Porta',
+      telephone: '+1-305-371-5060',
+      email: 'info@boporta.com',
+      url: 'https://bolivarporta.com',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '2000 S Dixie Highway, Suite 108',
+        addressLocality: 'Miami',
+        addressRegion: 'FL',
+        postalCode: '33133',
+        addressCountry: 'US'
+      }
+    },
+    areaServed: [
+      { '@type': 'City', name: 'Miami' },
+      { '@type': 'AdministrativeArea', name: 'Miami-Dade County' },
+      { '@type': 'State', name: 'Florida' }
+    ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Criminal Defense Services',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'DUI Defense',
+            description: 'DUI defense including breathalyzer challenges and license suspension hearings'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Domestic Violence Defense',
+            description: 'Defense against domestic violence charges and false accusations'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Drug Offense Defense',
+            description: 'Defense for possession, trafficking, and drug-related charges'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Federal Court Defense',
+            description: 'Federal criminal defense in U.S. District Court'
+          }
+        }
+      ]
+    },
+    availableChannel: {
+      '@type': 'ServiceChannel',
+      serviceUrl: 'https://bolivarporta.com/criminal-defense',
+      servicePhone: {
+        '@type': 'ContactPoint',
+        telephone: '+1-305-371-5060',
+        contactType: 'customer service',
+        areaServed: 'US',
+        availableLanguage: 'English'
+      }
+    }
   };
   return (
     <main id="main-content" className="min-h-screen">

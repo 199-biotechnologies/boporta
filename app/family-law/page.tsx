@@ -11,10 +11,79 @@ export const metadata = {
 export default function FamilyLawPage() {
   const serviceSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Service',
-    serviceType: 'Family Law',
-    areaServed: [{ '@type': 'City', name: 'Miami' }, { '@type': 'AdministrativeArea', name: 'Miami-Dade County' }],
-    provider: { '@type': 'LegalService', name: 'Bolívar C. Porta, P.A.', url: 'https://bolivarporta.com' },
+    '@type': 'LegalService',
+    name: 'Family Law Attorney Services',
+    description: 'Comprehensive family law services including divorce, child custody, timesharing, child support, alimony, and property division in Miami, Florida.',
+    serviceType: 'Family Law Attorney',
+    provider: {
+      '@type': 'Attorney',
+      name: 'Bolívar C. Porta',
+      telephone: '+1-305-371-5060',
+      email: 'info@boporta.com',
+      url: 'https://bolivarporta.com',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '2000 S Dixie Highway, Suite 108',
+        addressLocality: 'Miami',
+        addressRegion: 'FL',
+        postalCode: '33133',
+        addressCountry: 'US'
+      }
+    },
+    areaServed: [
+      { '@type': 'City', name: 'Miami' },
+      { '@type': 'AdministrativeArea', name: 'Miami-Dade County' },
+      { '@type': 'State', name: 'Florida' }
+    ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Family Law Services',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Divorce & Dissolution',
+            description: 'Contested and uncontested divorce representation'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Child Custody & Timesharing',
+            description: 'Parental responsibility and time-sharing schedules'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Child Support',
+            description: 'Establishment, modification, and enforcement'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Alimony & Spousal Support',
+            description: 'All types of spousal support in Florida'
+          }
+        }
+      ]
+    },
+    availableChannel: {
+      '@type': 'ServiceChannel',
+      serviceUrl: 'https://bolivarporta.com/family-law',
+      servicePhone: {
+        '@type': 'ContactPoint',
+        telephone: '+1-305-371-5060',
+        contactType: 'customer service',
+        areaServed: 'US',
+        availableLanguage: 'English'
+      }
+    }
   };
   return (
     <main id="main-content" className="min-h-screen">
