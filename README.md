@@ -279,8 +279,17 @@ npm start
 vercel --prod
 ```
 
-### Environment
-No environment variables required for basic functionality.
+### Environment Variables
+
+Create a `.env.local` file in the project root:
+
+```bash
+# Google Analytics 4 Measurement ID (optional)
+# Get from: https://analytics.google.com/ → Admin → Data Streams → Web
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+```
+
+**Note:** Without `NEXT_PUBLIC_GA_MEASUREMENT_ID`, the site functions normally but analytics won't be tracked. GA only loads in production (not development).
 
 ---
 
@@ -368,6 +377,12 @@ All rights reserved.
 ## Recent Updates
 
 **November 2025:**
+- ✅ **Google Analytics 4 Integration** (2025 Best Practices)
+  - Implemented using official `@next/third-parties/google` package
+  - Automatic pageview tracking (App Router compatible)
+  - Event tracking for phone calls and form submissions
+  - Production-only tracking (excludes dev/staging traffic)
+  - Enhanced measurement enabled by default
 - ✅ Enhanced Service schema on Family Law and Criminal Defense pages
   - Added LegalService schema with comprehensive service catalogs
   - Included contact points and available channels for voice search
@@ -407,7 +422,7 @@ All rights reserved.
 ## Future Roadmap
 
 ### Planned Features
-- [ ] Google Analytics integration
+- [x] Google Analytics 4 integration (implemented November 2025)
 - [ ] Call tracking system
 - [ ] A/B testing implementation
 - [ ] Blog CMS integration

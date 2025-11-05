@@ -3,6 +3,7 @@ import Link from "next/link";
 import ScrollReveal from "./components/ScrollReveal";
 import SchemaMarkup from "./components/SchemaMarkup";
 import ContactForm from "./components/ContactForm";
+import PhoneLink from "./components/PhoneLink";
 
 export default function Home() {
   // JSON-LD Schema for SEO
@@ -417,9 +418,9 @@ export default function Home() {
             <a href="/#contact" className="btn-primary group">
               <span className="relative">Request Consultation</span>
             </a>
-            <a href="tel:3053715060" className="btn-secondary group">
+            <PhoneLink className="btn-secondary group">
               <span className="relative">Call (305) 371-5060</span>
-            </a>
+            </PhoneLink>
           </div>
         </div>
       </header>
@@ -982,12 +983,9 @@ export default function Home() {
               </div>
 
               <div className="text-center mb-12">
-                <a
-                  href="tel:3053715060"
-                  className="font-display text-4xl md:text-5xl font-bold text-crimson hover:text-crimson/80 transition-all duration-300 hover:tracking-wider inline-block"
-                >
+                <PhoneLink className="font-display text-4xl md:text-5xl font-bold text-crimson hover:text-crimson/80 transition-all duration-300 hover:tracking-wider inline-block">
                   (305) 371-5060
-                </a>
+                </PhoneLink>
               </div>
 
               <div className="text-center">

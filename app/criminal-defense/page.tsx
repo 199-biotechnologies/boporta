@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ScrollReveal from "../components/ScrollReveal";
 import SchemaMarkup from "../components/SchemaMarkup";
+import PhoneLink from "../components/PhoneLink";
 
 export const metadata = {
   title: "Criminal Defense Lawyer Miami | DUI, Domestic Violence | Bo Porta",
@@ -322,9 +323,9 @@ export default function CriminalDefensePage() {
               Every hour you wait, they build their case. Evidence disappears. Witnesses forget. Rights get waived. Call now.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a href="tel:3053715060" className="btn-primary">
+              <PhoneLink className="btn-primary">
                 Call (305) 371-5060
-              </a>
+              </PhoneLink>
               <a href="/#contact" className="btn-secondary">
                 Contact Form
               </a>

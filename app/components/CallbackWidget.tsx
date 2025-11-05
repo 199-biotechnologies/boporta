@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { trackFormSubmission, trackCTAClick } from './GoogleAnalytics';
 
 export default function CallbackWidget() {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,6 +9,7 @@ export default function CallbackWidget() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    trackFormSubmission('callback_widget');
     setIsSubmitted(true);
     setTimeout(() => {
       setIsOpen(false);
@@ -15,12 +17,17 @@ export default function CallbackWidget() {
     }, 3000);
   };
 
+  const handleWidgetOpen = () => {
+    trackCTAClick('floating_widget', 'callback_open');
+    setIsOpen(true);
+  };
+
   return (
     <>
       {/* Floating Button */}
       {!isOpen && (
         <button
-          onClick={() => setIsOpen(true)}
+          onClick={handleWidgetOpen}
           className="fixed bottom-8 right-8 z-40 bg-crimson text-bone px-6 py-4 font-sans font-semibold uppercase tracking-wider shadow-lg hover:shadow-xl transition-all duration-300 hover:translate-y-[-2px] group"
           aria-label="Request callback"
         >

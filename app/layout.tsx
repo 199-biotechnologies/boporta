@@ -101,6 +101,7 @@ export const viewport: Viewport = {
 
 import Navigation from "./components/Navigation";
 import CallbackWidget from "./components/CallbackWidget";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 
 export default function RootLayout({
   children,
@@ -120,6 +121,7 @@ export default function RootLayout({
         {children}
         <CallbackWidget />
       </body>
+      <GoogleAnalytics />
     </html>
   );
 }

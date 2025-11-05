@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ScrollReveal from "../components/ScrollReveal";
 import SchemaMarkup from "../components/SchemaMarkup";
+import PhoneLink from "../components/PhoneLink";
 
 export const metadata = {
   title: "Family Law Attorney Miami | Divorce, Custody, Support | Bo Porta",
@@ -325,9 +326,9 @@ export default function FamilyLawPage() {
               Custody, assets, your children's future. The other side retained counsel. When do you?
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a href="tel:3053715060" className="btn-primary">
+              <PhoneLink className="btn-primary">
                 Call (305) 371-5060
-              </a>
+              </PhoneLink>
               <a href="/#contact" className="btn-secondary">
                 Contact Form
               </a>

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ScrollReveal from "../components/ScrollReveal";
 import SchemaMarkup from "../components/SchemaMarkup";
+import PhoneLink from "../components/PhoneLink";
 
 export const metadata = {
   title: "About Bo Porta | Miami Trial Attorney | 29 Years Experience",
@@ -288,9 +289,9 @@ export default function AboutPage() {
               Whether you're facing family law challenges or criminal charges, experience matters. Contact the Law Office of Bolívar C. Porta today.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-6">
-              <a href="tel:3053715060" className="btn-primary">
+              <PhoneLink className="btn-primary">
                 Call (305) 371-5060
-              </a>
+              </PhoneLink>
               <a href="/#contact" className="btn-secondary !border-midnight !text-midnight hover:!bg-midnight hover:!text-bone">
                 Contact Form
               </a>
