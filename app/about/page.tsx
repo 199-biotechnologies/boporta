@@ -5,7 +5,7 @@ import PhoneLink from "../components/PhoneLink";
 
 export const metadata = {
   title: "About Bo Porta | Miami Trial Attorney | 29 Years Experience",
-  description: "Bolívar C. Porta - Miami trial attorney with 29 years experience, 1,550+ cases. Former Public Defender, Federal Court admitted. Avvo 8.6 rated. Family law and criminal defense specialist.",
+  description: "Bolívar C. Porta - Miami trial attorney with 29 years experience, 1,550+ cases. Former Public Defender, Federal Court admitted. Avvo 8.6 rated. Experienced in family law and criminal defense.",
   alternates: {
     canonical: 'https://bolivarporta.com/about',
   },
@@ -232,7 +232,7 @@ export default function AboutPage() {
                 <div className="font-display text-xl font-bold mb-2">Associate Attorney</div>
                 <div className="font-sans text-sm uppercase tracking-wider text-titanium mb-2">Soven & Wax, P.A. | 1996–1997</div>
                 <p className="font-body text-midnight/80 leading-relaxed">
-                  Early practice experience at established Miami firm specializing in civil and criminal litigation.
+                  Early practice experience at established Miami firm focused on civil and criminal litigation.
                 </p>
               </div>
             </ScrollReveal>

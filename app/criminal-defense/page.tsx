@@ -222,7 +222,7 @@ export default function CriminalDefensePage() {
                   BOTH STATE AND FEDERAL COURT
                 </h3>
                 <p className="font-body text-lg text-bone/80 leading-relaxed">
-                  Licensed in U.S. District Court, Southern District of Florida. Federal charges carry severe mandatory minimums. Federal sentencing guidelines require specialized knowledge. Federal prosecutors are highly trained. You need an attorney with federal experience.
+                  Licensed in U.S. District Court, Southern District of Florida. Federal charges carry severe mandatory minimums. Federal sentencing guidelines require specific knowledge. Federal prosecutors are highly trained. You need an attorney with federal experience.
                 </p>
               </div>
             </ScrollReveal>

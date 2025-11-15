@@ -93,7 +93,7 @@ export default function BlogPost() {
                   Divorce cases range from uncontested dissolutions with full agreement on all terms to high-conflict litigation involving custody battles, hidden assets, and domestic violence allegations. Your case complexity determines required attorney experience.
                 </p>
                 <p className="text-midnight/80 mb-4">
-                  Uncontested divorces with no children, minimal assets, and mutual agreement require less specialized representation. High-conflict cases with contested custody, complex asset division (businesses, offshore accounts, real estate portfolios), or domestic violence injunctions demand attorneys with extensive trial experience and forensic discovery capabilities.
+                  Uncontested divorces with no children, minimal assets, and mutual agreement require less extensive representation. High-conflict cases with contested custody, complex asset division (businesses, offshore accounts, real estate portfolios), or domestic violence injunctions demand attorneys with extensive trial experience and forensic discovery capabilities.
                 </p>
                 <p className="text-midnight/80">
                   Identify your priorities: custody protection, asset preservation, minimizing spousal support obligations, or expedited resolution. Different attorneys excel in different areas. Match your needs to attorney strengths.
@@ -130,7 +130,7 @@ export default function BlogPost() {
                   Trial experience matters. Many divorce attorneys avoid trial, pressuring clients to accept unfavorable settlements. Opposing counsel knows which attorneys will capitulate rather than litigate. Attorneys with trial experience negotiate better settlements because opposition knows the alternative is costly litigation.
                 </p>
                 <p className="text-midnight/80">
-                  Ask specific questions: How many family law trials have you conducted? How many before Judge [assigned judge]? What percentage of your practice is family law versus other areas? Years practicing family law specifically in Miami-Dade County? General practice attorneys handling occasional divorces lack specialized expertise.
+                  Ask specific questions: How many family law trials have you conducted? How many before Judge [assigned judge]? What percentage of your practice is family law versus other areas? Years practicing family law specifically in Miami-Dade County? General practice attorneys handling occasional divorces lack focused expertise.
                 </p>
               </div>
             </ScrollReveal>
@@ -184,7 +184,7 @@ export default function BlogPost() {
                   Request detailed monthly billing statements itemizing time entries by task, date, attorney, and time spent. Vague billing descriptions ("legal research," "case preparation") prevent cost verification. Specific entries ("Research Florida case law regarding parental relocation—1.5 hours") enable informed evaluation.
                 </p>
                 <p className="text-midnight/80">
-                  Expensive attorneys are not always better—but experienced specialists command higher rates for valid reasons. Conversely, bargain rates often indicate inexperience or overextended practices. Balance cost against case stakes. Inadequate representation in high-conflict custody cases costs more than higher hourly rates through unfavorable outcomes.
+                  Expensive attorneys are not always better—but highly experienced attorneys command higher rates for valid reasons. Conversely, bargain rates often indicate inexperience or overextended practices. Balance cost against case stakes. Inadequate representation in high-conflict custody cases costs more than higher hourly rates through unfavorable outcomes.
                 </p>
               </div>
             </ScrollReveal>
@@ -198,7 +198,7 @@ export default function BlogPost() {
                   Divorce attorney selection is not merely finding someone to file paperwork. Your attorney's competence, experience, and commitment directly affect custody arrangements, financial stability, and post-divorce quality of life.
                 </p>
                 <p className="text-midnight/80 mb-4">
-                  High-conflict divorces involving custody battles, hidden assets, or domestic violence allegations require specialized expertise. General practice attorneys or those primarily handling uncontested cases lack the investigative resources, expert witness relationships, and courtroom experience necessary for complex litigation.
+                  High-conflict divorces involving custody battles, hidden assets, or domestic violence allegations require focused expertise. General practice attorneys or those primarily handling uncontested cases lack the investigative resources, expert witness relationships, and courtroom experience necessary for complex litigation.
                 </p>
                 <p className="text-midnight/80 font-semibold">
                   Choose your divorce attorney with the same care you apply to protecting your children, assets, and future. The decision affects all three.

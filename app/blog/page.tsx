@@ -11,7 +11,7 @@ const blogPosts = [
   {
     slug: "protecting-your-rights-criminal-defense-lawyer",
     title: "Protecting Your Rights: Finding the Best Criminal Defense Lawyer",
-    excerpt: "Criminal charges in domestic disputes require specialized defense. Six critical factors when choosing representation—because the wrong attorney costs more than money.",
+    excerpt: "Criminal charges in domestic disputes require focused defense expertise. Six critical factors when choosing representation—because the wrong attorney costs more than money.",
     category: "Criminal Defense",
     date: "May 9, 2024",
     readTime: "5 min read",

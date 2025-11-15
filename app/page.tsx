@@ -17,7 +17,7 @@ export default function Home() {
       "url": "https://bolivarporta.com",
       "logo": "https://bolivarporta.com/portrait-bo-porta.webp",
       "image": "https://bolivarporta.com/portrait-bo-porta.webp",
-      "description": "Miami trial attorney with 29 years experience specializing in criminal defense and family law. Avvo 8.6 rated with over 1,550 cases.",
+      "description": "Miami trial attorney with 29 years experience focused on criminal defense and family law. Avvo 8.6 rated with over 1,550 cases.",
       "telephone": "+1-305-371-5060",
       "email": "info@boporta.com",
       "address": {
@@ -270,7 +270,7 @@ export default function Home() {
         "name": "Bolívar C. Porta"
       },
       "slogan": "Two worlds collide. One lawyer who operates in both.",
-      "description": "Miami trial attorney with 29 years experience specializing in criminal defense and family law. Dual practice enables comprehensive representation when cases overlap, such as domestic violence allegations during divorce proceedings.",
+      "description": "Miami trial attorney with 29 years experience focused on criminal defense and family law. Dual practice enables comprehensive representation when cases overlap, such as domestic violence allegations during divorce proceedings.",
       "telephone": "+1-305-371-5060",
       "email": "info@boporta.com",
       "address": {
@@ -671,6 +671,15 @@ export default function Home() {
               </div>
             </ScrollReveal>
           </div>
+
+          {/* Results Disclaimer - Required by SC2022-1294 (2023) */}
+          <ScrollReveal delay={400}>
+            <div className="border-t border-bone/20 pt-12 mt-12 max-w-4xl mx-auto">
+              <p className="font-sans text-sm text-bone/70 leading-relaxed text-center">
+                <strong className="text-bone">CASE RESULTS DISCLAIMER:</strong> Past results do not guarantee future outcomes. Each case is unique and depends on specific facts, evidence, and legal circumstances. The results shown represent outcomes in specific cases and are not representative of all cases handled by this firm. No attorney can guarantee any particular result.
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 

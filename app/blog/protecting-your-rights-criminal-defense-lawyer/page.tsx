@@ -4,7 +4,7 @@ import SchemaMarkup from "../../components/SchemaMarkup";
 
 export const metadata = {
   title: "Protecting Your Rights: Finding the Best Criminal Defense Lawyer | Bo Porta",
-  description: "Six critical factors when choosing criminal defense representation in Miami. Specialization, credentials, trial experience matter when your freedom is at stake.",
+  description: "Six critical factors when choosing criminal defense representation in Miami. Practice focus, credentials, trial experience matter when your freedom is at stake.",
   alternates: {
     canonical: 'https://bolivarporta.com/blog/protecting-your-rights-criminal-defense-lawyer',
   },
@@ -18,7 +18,7 @@ export default function BlogPost() {
     headline:
       'Protecting Your Rights: Finding the Best Criminal Defense Lawyer',
     description:
-      'Six critical factors when choosing criminal defense representation in Miami. Specialization, credentials, trial experience matter when your freedom is at stake.',
+      'Six critical factors when choosing criminal defense representation in Miami. Practice focus, credentials, trial experience matter when your freedom is at stake.',
     author: {
       '@type': 'Person',
       name: 'Bolívar C. Porta',
@@ -75,7 +75,7 @@ export default function BlogPost() {
             </h1>
 
             <p className="font-body text-xl text-bone/80 leading-relaxed">
-              Criminal charges in domestic disputes require specialized defense. The wrong attorney costs more than money—it costs freedom, reputation, and future.
+              Criminal charges in domestic disputes require focused defense expertise. The wrong attorney costs more than money—it costs freedom, reputation, and future.
             </p>
           </ScrollReveal>
         </div>
@@ -94,7 +94,7 @@ export default function BlogPost() {
             <ScrollReveal delay={100}>
               <div>
                 <h2 className="font-display text-3xl font-bold mb-4 text-crimson">
-                  1. Specialization in Domestic Violence and Family-Related Criminal Matters
+                  1. Practice Focus in Domestic Violence and Family-Related Criminal Matters
                 </h2>
                 <p className="text-midnight/80 mb-4">
                   Criminal defense spans federal fraud to drug trafficking. Domestic violence and family-related criminal charges require specific expertise. These cases intersect family court proceedings—divorce, custody, timesharing. False allegations weaponized during contentious divorces demand attorneys who practice in both criminal and family courts.
